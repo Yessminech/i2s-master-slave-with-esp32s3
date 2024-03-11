@@ -12,7 +12,7 @@
 #define I2S_MASTER_CLK 47
 #define I2S_DATA 48
 #define EXAMPLE_RECV_BUF_SIZE (2400)
-#define EXAMPLE_SAMPLE_RATE (16000) // LRCK / WS: Left/right clock or word select clock. For non-PDM mode, its frequency is equal to the sample rate.
+#define EXAMPLE_SAMPLE_RATE (8000) // WS: Left/right clock or word select clock. For non-PDM mode, its frequency is equal to the sample rate.
 static const char err_reason[][30] = {"input param is invalid",
                                       "operation timeout"};
 static const char *TAG = "i2s_master";
@@ -25,7 +25,7 @@ static esp_err_t i2s_master_init(void)
     ESP_ERROR_CHECK(i2s_new_channel(&chan_cfg, NULL, &rx_handle));
     i2s_std_config_t std_cfg = {
         .clk_cfg = I2S_STD_CLK_DEFAULT_CONFIG(EXAMPLE_SAMPLE_RATE),
-        .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_MONO),
+        .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_STD_SLOT_LEFT), //lef -> ws is low
         .gpio_cfg = {
             .mclk = I2S_GPIO_UNUSED,
             .bclk = I2S_MASTER_CLK,
@@ -34,13 +34,14 @@ static esp_err_t i2s_master_init(void)
             .din = I2S_DATA,
             .invert_flags = {
                 .mclk_inv = false,
-                .bclk_inv = true,
+                .bclk_inv = false,
                 .ws_inv = false, // default left: ws is low
             },
         },
     };
+
+    std_cfg.slot_cfg.slot_mask = I2S_STD_SLOT_LEFT; 
     /* Before reading data, init the RX channel first */
-    std_cfg.slot_cfg.slot_mask = I2S_STD_SLOT_LEFT;
     ESP_ERROR_CHECK(i2s_channel_init_std_mode(rx_handle, &std_cfg));
 
     /* Before reading data, start the RX channel first */
@@ -96,5 +97,5 @@ void app_main(void)
     }
 
     /* Read the data from the slave node */
-    // xTaskCreate(i2s_read, "i2s_read", 2048, NULL, 5, NULL); // todo: Check freeRtos Stack size 2048 or 8192
+    xTaskCreate(i2s_read, "i2s_read", 2048, NULL, 5, NULL); // todo: Check freeRtos Stack size 2048 or 8192
 }

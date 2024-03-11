@@ -1,0 +1,16 @@
+usage: esptool [-h]
+               [--chip {auto,esp8266,esp32,esp32s2,esp32s3beta2,esp32s3,esp32c3,esp32c6beta,esp32h2beta1,esp32h2beta2,esp32c2,esp32c6,esp32h2}]
+               [--port PORT] [--baud BAUD]
+               [--before {default_reset,usb_reset,no_reset,no_reset_no_sync}]
+               [--after {hard_reset,soft_reset,no_reset,no_reset_stub}]
+               [--no-stub] [--trace] [--override-vddsdio [{1.8V,1.9V,OFF}]]
+               [--connect-attempts CONNECT_ATTEMPTS]
+               {load_ram,dump_mem,read_mem,write_mem,write_flash,run,image_info,make_image,elf2image,read_mac,chip_id,flash_id,read_flash_status,write_flash_status,read_flash,verify_flash,erase_flash,erase_region,merge_bin,get_security_info,version}
+               ...
+esptool: error: argument --port/-p: expected one argument
+CMake Error at run_serial_tool.cmake:58 (message):
+  
+  C:/Espressif5.0/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esptool_py/esptool/esptool.py;--chip;esp32s3
+  failed
+
+

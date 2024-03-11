@@ -13,7 +13,7 @@
 #define I2S_DATA 10
 
 #define NUM_BYTES_PAYLOAD 5
-#define EXAMPLE_SAMPLE_RATE (16000)
+#define EXAMPLE_SAMPLE_RATE (8000)
 
 static const char err_reason[][30] = {"input param is invalid",
                                       "operation timeout"};
@@ -23,24 +23,25 @@ static i2s_chan_handle_t tx_handle = NULL;
 static esp_err_t i2s_slave_init(void)
 {
     i2s_chan_config_t chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_AUTO, I2S_ROLE_SLAVE);
-    chan_cfg.auto_clear = true; // Auto clear the legacy data in the DMA buffer //todo
+    //chan_cfg.auto_clear = true; // Auto clear the legacy data in the DMA buffer //todo
     ESP_ERROR_CHECK(i2s_new_channel(&chan_cfg, &tx_handle, NULL));
     i2s_std_config_t std_cfg = {
         .clk_cfg = I2S_STD_CLK_DEFAULT_CONFIG(EXAMPLE_SAMPLE_RATE),
-        .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_STD_SLOT_LEFT),
+        .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_STD_SLOT_LEFT), //mode not making a difference I2S_SLOT_MODE_STEREO
         .gpio_cfg = {
-            .mclk = I2S_GPIO_UNUSED,
+            .mclk = I2S_GPIO_UNUSED, //todo is this
             .bclk = I2S_BCK,
             .ws = I2S_WS,
-            .dout = I2S_GPIO_UNUSED,
-            .din = I2S_DATA,
+            .dout = I2S_DATA,
+            .din = I2S_GPIO_UNUSED,
             .invert_flags = {
                 .mclk_inv = false,
-                .bclk_inv = true,
+                .bclk_inv = false, //todo
                 .ws_inv = false, // default left: ws is low
             },
         },
     };
+    std_cfg.slot_cfg.slot_mask = I2S_STD_SLOT_LEFT; //this is needed
     /* Before writing data, init the TX channel first */
     ESP_ERROR_CHECK(i2s_channel_init_std_mode(tx_handle, &std_cfg));
 
@@ -53,7 +54,7 @@ static void i2s_write(void *args)
 {
     esp_err_t ret = ESP_OK;
     size_t payloadIndex = 0;
-    uint16_t payloadBytes[NUM_BYTES_PAYLOAD] = {0x01, 0x02, 0x03, 0x04, 0x05};
+    uint16_t payloadBytes[NUM_BYTES_PAYLOAD] = {0x01, 0x01, 0x01, 0x01, 0x03};
     ESP_LOGI(TAG, "[WRITE] Write start");
     while (1)
     {
@@ -68,14 +69,15 @@ static void i2s_write(void *args)
         {
             ESP_LOGI(TAG, "[WRITE] i2s write successful, %d bytes are written.", payloadIndex);
         }
-        payloadIndex = (payloadIndex + 1) % NUM_BYTES_PAYLOAD;
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        //payloadIndex = (payloadIndex + 1) % NUM_BYTES_PAYLOAD;
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
-    vTaskDelete(NULL);
+    //vTaskDelete(NULL);
 }
 
 void app_main(void)
 {
+    
     printf("i2s write start\n-----------------------------\n");
     /* Initialize i2s peripheral */
     if (i2s_slave_init() != ESP_OK)
