@@ -54,7 +54,7 @@ static void i2s_write(void *args)
 {
     esp_err_t ret = ESP_OK;
     size_t payloadIndex = 0;
-    uint16_t payloadBytes[NUM_BYTES_PAYLOAD] = {0x01, 0x01, 0x01, 0x01, 0x03};
+    uint16_t payloadBytes[NUM_BYTES_PAYLOAD] = {0x01, 0x02, 0x03, 0x04, 0x05};
     ESP_LOGI(TAG, "[WRITE] Write start");
     while (1)
     {

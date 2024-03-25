@@ -1,0 +1,206 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 10:09:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b144h ( 45380) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b16c vaddr=3fc91b00 size=023a8h (  9128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d51c vaddr=40374000 size=02afch ( 11004) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d5d4h (120276) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d5fc vaddr=40376afc size=0aff0h ( 45040) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (193) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
+[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
+[0;32mI (210) cpu_start: ELF file SHA256:  4840594a34131824...[0m
+[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (270) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (291) app_start: Starting scheduler on CPU0[0m
+[0;32mI (295) app_start: Starting scheduler on CPU1[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (314) i2s_master: i2s driver init success[0m
+[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
+[0;32mI (323) i2s_master: Task notified start of acquisition ..[0m
+[0;32mI (569) i2s_master: bytesRead4092, bytesToRead2046, cursor4092[0m
+[0;32mI (825) i2s_master: bytesRead4092, bytesToRead2046, cursor8184[0m
+[0;32mI (835) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (835) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (837) i2s_master: 0x03 [0m
+[0;32mI (840) i2s_master: 0x03 [0m
+[0;32mI (843) i2s_master: 0x03 [0m
+[0;32mI (846) i2s_master: 0x03 [0m
+[0;32mI (850) i2s_master: 0x03 [0m
+[0;32mI (853) i2s_master: 0x03 [0m
+[0;32mI (856) i2s_master: 0x03 [0m
+[0;32mI (860) i2s_master: 0x03 [0m
+[0;32mI (863) i2s_master: 0x03 [0m
+[0;32mI (866) i2s_master: 0x03 [0m
+[0;32mI (869) i2s_master: 0x03 [0m
+[0;32mI (873) i2s_master: 0x03 [0m
+[0;32mI (876) i2s_master: 0x03 [0m
+[0;32mI (879) i2s_master: 0x03 [0m
+[0;32mI (883) i2s_master: 0x03 [0m
+[0;32mI (886) i2s_master: 0x03 [0m
+[0;32mI (889) i2s_master: 0x03 [0m
+[0;32mI (893) i2s_master: 0x03 [0m
+[0;32mI (896) i2s_master: 0x03 [0m
+[0;32mI (899) i2s_master: 0x03 [0m
+[0;32mI (902) i2s_master: 0x03 [0m
+[0;32mI (906) i2s_master: 0x00 [0m
+[0;32mI (909) i2s_master: 0x00 [0m
+[0;32mI (912) i2s_master: 0x00 [0m
+[0;32mI (916) i2s_master: 0x00 [0m
+[0;32mI (919) i2s_master: 0x00 [0m
+[0;32mI (922) i2s_master: 0x00 [0m
+[0;32mI (926) i2s_master: 0x00 [0m
+[0;32mI (929) i2s_master: 0x00 [0m
+[0;32mI (932) i2s_master: 0x00 [0m
+[0;32mI (935) i2s_master: 0x00 [0m
+[0;32mI (939) i2s_master: 0x00 [0m
+[0;32mI (942) i2s_master: 0x00 [0m
+[0;32mI (945) i2s_master: 0x00 [0m
+[0;32mI (949) i2s_master: 0x00 [0m
+[0;32mI (952) i2s_master: 0x00 [0m
+[0;32mI (955) i2s_master: 0x00 [0m
+[0;32mI (959) i2s_master: 0x00 [0m
+[0;32mI (962) i2s_master: 0x00 [0m
+[0;32mI (965) i2s_master: 0x00 [0m
+[0;32mI (968) i2s_master: Task notified start of acquisition ..[0m
+[0;32mI (1081) i2s_master: bytesRead4092, bytesToRead2046, cursor4092[0m
+[0;32mI (1337) i2s_master: bytesRead4092, bytesToRead2046, cursor8184[0m
+[0;32mI (1347) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1347) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1349) i2s_master: 0x01 [0m
+[0;32mI (1352) i2s_master: 0x01 [0m
+[0;32mI (1355) i2s_master: 0x01 [0m
+[0;32mI (1359) i2s_master: 0x01 [0m
+[0;32mI (1362) i2s_master: 0x01 [0m
+[0;32mI (1366) i2s_master: 0x01 [0m
+[0;32mI (1369) i2s_master: 0x01 [0m
+[0;32mI (1372) i2s_master: 0x01 [0m
+[0;32mI (1376) i2s_master: 0x01 [0m
+[0;32mI (1379) i2s_master: 0x01 [0m
+[0;32mI (1383) i2s_master: 0x01 [0m
+[0;32mI (1386) i2s_master: 0x01 [0m
+[0;32mI (1389) i2s_master: 0x01 [0m
+[0;32mI (1393) i2s_master: 0x01 [0m
+[0;32mI (1396) i2s_master: 0x01 [0m
+[0;32mI (1399) i2s_master: 0x01 [0m
+[0;32mI (1403) i2s_master: 0x01 [0m
+[0;32mI (1406) i2s_master: 0x01 [0m
+[0;32mI (1410) i2s_master: 0x01 [0m
+[0;32mI (1413) i2s_master: 0x01 [0m
+[0;32mI (1416) i2s_master: 0x01 [0m
+[0;32mI (1420) i2s_master: 0x00 [0m
+[0;32mI (1423) i2s_master: 0x00 [0m
+[0;32mI (1427) i2s_master: 0x00 [0m
+[0;32mI (1430) i2s_master: 0x00 [0m
+[0;32mI (1433) i2s_master: 0x00 [0m
+[0;32mI (1437) i2s_master: 0x00 [0m
+[0;32mI (1440) i2s_master: 0x00 [0m
+[0;32mI (1443) i2s_master: 0x00 [0m
+[0;32mI (1447) i2s_master: 0x00 [0m
+[0;32mI (1450) i2s_master: 0x00 [0m
+[0;32mI (1454) i2s_master: 0x00 [0m
+[0;32mI (1457) i2s_master: 0x00 [0m
+[0;32mI (1460) i2s_master: 0x00 [0m
+[0;32mI (1464) i2s_master: 0x00 [0m
+[0;32mI (1467) i2s_master: 0x00 [0m
+[0;32mI (1471) i2s_master: 0x00 [0m
+[0;32mI (1474) i2s_master: 0x00 [0m
+[0;32mI (1477) i2s_master: 0x00 [0m
+[0;32mI (1481) i2s_master: 0x00 [0m
+[0;32mI (1484) i2s_master: Task notified start of acquisition ..[0m
+[0;32mI (1592) i2s_master: bytesRead4092, bytesToRead2046, cursor4092[0m
+[0;32mI (1848) i2s_master: bytesRead4092, bytesToRead2046, cursor8184[0m
+[0;32mI (1858) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1858) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1860) i2s_master: 0x01 [0m
+[0;32mI (1863) i2s_master: 0x01 [0m
+[0;32mI (1866) i2s_master: 0x01 [0m
+[0;32mI (1870) i2s_master: 0x01 [0m
+[0;32mI (1873) i2s_master: 0x01 [0m
+[0;32mI (1877) i2s_master: 0x01 [0m
+[0;32mI (1880) i2s_master: 0x01 [0m
+[0;32mI (1883) i2s_master: 0x01 [0m
+[0;32mI (1887) i2s_master: 0x01 [0m
+[0;32mI (1890) i2s_master: 0x01 [0m
+[0;32mI (1894) i2s_master: 0x01 [0m
+[0;32mI (1897) i2s_master: 0x01 [0m
+[0;32mI (1900) i2s_master: 0x01 [0m
+[0;32mI (1904) i2s_master: 0x01 [0m
+[0;32mI (1907) i2s_master: 0x01 [0m
+[0;32mI (1910) i2s_master: 0x01 [0m
+[0;32mI (1914) i2s_master: 0x01 [0m
+[0;32mI (1917) i2s_master: 0x01 [0m
+[0;32mI (1921) i2s_master: 0x01 [0m
+[0;32mI (1924) i2s_master: 0x01 [0m
+[0;32mI (1927) i2s_master: 0x01 [0m
+[0;32mI (1931) i2s_master: 0x00 [0m
+[0;32mI (1934) i2s_master: 0x00 [0m
+[0;32mI (1938) i2s_master: 0x00 [0m
+[0;32mI (1941) i2s_master: 0x00 [0m
+[0;32mI (1944) i2s_master: 0x00 [0m
+[0;32mI (1948) i2s_master: 0x00 [0m
+[0;32mI (1951) i2s_master: 0x00 [0m
+[0;32mI (1954) i2s_master: 0x00 [0m
+[0;32mI (1958) i2s_master: 0x00 [0m
+[0;32mI (1961) i2s_master: 0x00 [0m
+[0;32mI (1965) i2s_master: 0x00 [0m
+[0;32mI (1968) i2s_master: 0x00 [0m
+[0;32mI (1971) i2s_master: 0x00 [0m
+[0;32mI (1975) i2s_master: 0x00 [0m
+[0;32mI (1978) i2s_master: 0x00 [0m
+[0;32mI (1982) i2s_master: 0x00 [0m
+[0;32mI (1985) i2s_master: 0x00 [0m
+[0;32mI (1988) i2s_master: 0x00 [0m
+[0;32mI (1992) i2s_master: 0x00 [0m
+[0;32mI (1995) i2s_master: Task notified start of acquisition ..[0m
+[0;32mI (2104) i2s_master: bytesRead4092, bytesToRead2046, cursor4092[0m
+[0;32mI (2360) i2s_master: bytesRead4092, bytesToRead2046, cursor8184[0m
+[0;32mI (2370) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (2370) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (2372) i2s_master: 0x01 [0m
+[0;32mI (2375) i2s_master: 0x01 [0m
+[0;32mI (2378) i2s_master: 0x01 [0m
+[0;32mI (2382) i2s_master: 0x01 [0m
+[0;32mI (2385) i2s_master: 0x01 [0m

@@ -1,0 +1,345 @@
+2) cpu_ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 10:09:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0a4h ( 45220) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b0cc vaddr=3fc91b00 size=023a8h (  9128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d47c vaddr=40374000 size=02b9ch ( 11164) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d53ch (120124) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d564 vaddr=40376b9c size=0af50h ( 44880) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
+[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
+[0;32mI (210) cpu_start: ELF file SHA256:  6794a011b1ccceac...[0m
+[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (291) app_start: Starting scheduler on CPU0[0m
+[0;32mI (295) app_start: Starting scheduler on CPU1[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (314) i2s_master: i2s driver init success[0m
+[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
+[0;32mI (824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (2324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (2324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (2834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (2834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (3314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (3314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (3824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (3824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (4334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (4334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (4814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (4814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (5324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (5324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (5834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (5834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (6314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (6314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (6824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (6824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (7334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (7334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (7814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (7814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (8324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (8324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (8834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (8834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (9314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (9314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (9824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (9824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (10334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (10334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (10814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (10814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (11324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (11324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (11834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (11834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (12314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (12314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (12824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (12824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (13334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (13334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (13814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (13814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (14324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (14324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (14834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (14834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (15314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (15314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (15824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (15824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (16334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (16334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (16814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (16814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (17324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (17324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (17834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (17834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (18314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (18314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (18824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (18824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (19334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (19334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (19814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (19814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (20324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (20324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (20834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (20834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (21314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (21314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (21824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (21824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (22334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (22334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (22814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (22814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (23324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (23324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (23834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (23834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (24314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (24314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (24824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (24824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (25334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (25334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (25814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (25814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (26324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (26324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (26834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (26834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (27314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (27314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (27824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (27824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (28334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (28334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (28814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (28814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (29324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (29324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (29834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (29834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (30314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (30314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (30824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (30824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (31334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (31334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (31814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (31814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (32324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (32324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (32834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (32834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (33314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (33314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (33824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (33824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (34334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (34334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (34814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (34814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (35324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (35324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (35834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (35834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (36314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (36314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (36824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (36824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (37334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (37334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (37814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (37814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (38324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (38324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (38834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (38834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (39314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (39314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (39824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (39824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (40334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (40334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (40814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (40814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (41324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (41324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (41834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (41834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (42314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (42314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (42824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (42824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (43334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (43334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (43814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (43814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (44324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (44324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (44834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (44834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (45314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (45314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (45824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (45824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (46334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (46334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (46814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (46814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (47324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (47324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (47834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (47834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (48314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (48314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (48824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (48824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (49334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (49334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (49814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (49814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (50324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (50324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (50834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (50834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (51314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (51314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (51824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (51824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (52334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (52334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (52814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (52814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (53324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (53324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (53834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (53834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (54314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (54314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (54824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (54824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (55334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (55334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (55814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (55814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (56324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (56324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (56834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (56834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (57314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (57314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (57824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (57824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (58334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (58334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (58814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (58814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (59324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (59324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (59834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (59834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (60314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (60314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (60824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (60824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (61334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (61334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (61814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (61814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (62324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (62324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (62834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (62834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (63314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (63314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (63824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (63824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (64334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (64334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (64814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (64814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (65324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (65324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (65834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (65834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (66314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (66314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (66824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (66824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (67334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (67334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (67814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (67814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (68324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (68324) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (68834) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (68834) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (69314) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (69314) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (69824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (69824) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (70334) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (70334) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (70814) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (70814) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (71324) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (71324) i2s_master: Task notified end of acquisition successfully.[0m

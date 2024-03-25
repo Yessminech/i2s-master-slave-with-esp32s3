@@ -1,0 +1,456 @@
+g-mast�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 10:09:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0bch ( 45244) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b0e4 vaddr=3fc91b00 size=023a8h (  9128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d494 vaddr=40374000 size=02b84h ( 11140) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d56ch (120172) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d594 vaddr=40376b84 size=0af68h ( 44904) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
+[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
+[0;32mI (210) cpu_start: ELF file SHA256:  1fec3c58151e4306...[0m
+[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (291) app_start: Starting scheduler on CPU0[0m
+[0;32mI (295) app_start: Starting scheduler on CPU1[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (314) i2s_master: i2s driver init success[0m
+[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
+[0;32mI (584) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (584) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (586) i2s_master: 0[0m
+[0;32mI (589) i2s_master: 1[0m
+[0;32mI (591) i2s_master: 1[0m
+[0;32mI (594) i2s_master: 1[0m
+[0;32mI (597) i2s_master: 1[0m
+[0;32mI (600) i2s_master: 1[0m
+[0;32mI (603) i2s_master: 1[0m
+[0;32mI (606) i2s_master: 1[0m
+[0;32mI (609) i2s_master: 1[0m
+[0;32mI (612) i2s_master: 1[0m
+[0;32mI (615) i2s_master: 1[0m
+[0;32mI (618) i2s_master: 1[0m
+[0;32mI (621) i2s_master: 1[0m
+[0;32mI (624) i2s_master: 1[0m
+[0;32mI (627) i2s_master: 1[0m
+[0;32mI (630) i2s_master: 1[0m
+[0;32mI (633) i2s_master: 1[0m
+[0;32mI (636) i2s_master: 1[0m
+[0;32mI (639) i2s_master: 1[0m
+[0;32mI (642) i2s_master: 1[0m
+[0;32mI (645) i2s_master: 1[0m
+[0;32mI (648) i2s_master: -7085[0m
+[0;32mI (651) i2s_master: 13467[0m
+[0;32mI (654) i2s_master: 30910[0m
+[0;32mI (657) i2s_master: 32577[0m
+[0;32mI (661) i2s_master: -30122[0m
+[0;32mI (664) i2s_master: 4057[0m
+[0;32mI (667) i2s_master: 17112[0m
+[0;32mI (671) i2s_master: 1289[0m
+[0;32mI (674) i2s_master: -2868[0m
+[0;32mI (677) i2s_master: 3968[0m
+[0;32mI (680) i2s_master: 12120[0m
+[0;32mI (684) i2s_master: 1524[0m
+[0;32mI (687) i2s_master: -31007[0m
+[0;32mI (690) i2s_master: 16317[0m
+[0;32mI (694) i2s_master: 8433[0m
+[0;32mI (697) i2s_master: -9771[0m
+[0;32mI (700) i2s_master: 28053[0m
+[0;32mI (703) i2s_master: -27926[0m
+[0;32mI (707) i2s_master: -23997[0m
+[0;32mI (710) i2s_master: -1880[0m
+[0;32mI (713) i2s_master: -28106[0m
+[0;32mI (717) i2s_master: -1194[0m
+[0;32mI (720) i2s_master: -13473[0m
+[0;32mI (724) i2s_master: 31772[0m
+[0;32mI (727) i2s_master: 24464[0m
+[0;32mI (730) i2s_master: 16566[0m
+[0;32mI (733) i2s_master: 1911[0m
+[0;32mI (737) i2s_master: -29161[0m
+[0;32mI (740) i2s_master: -29087[0m
+[0;32mI (743) i2s_master: -10922[0m
+[0;32mI (747) i2s_master: -27150[0m
+[0;32mI (750) i2s_master: 979[0m
+[0;32mI (753) i2s_master: -30119[0m
+[0;32mI (757) i2s_master: 28877[0m
+[0;32mI (760) i2s_master: 20635[0m
+[0;32mI (763) i2s_master: 4102[0m
+[0;32mI (766) i2s_master: 31112[0m
+[0;32mI (770) i2s_master: -867[0m
+[0;32mI (773) i2s_master: -31059[0m
+[0;32mI (776) i2s_master: 3331[0m
+[0;32mI (780) i2s_master: 28215[0m
+[0;32mI (783) i2s_master: 24407[0m
+[0;32mI (786) i2s_master: 32612[0m
+[0;32mI (789) i2s_master: -32422[0m
+[0;32mI (793) i2s_master: -4351[0m
+[0;32mI (796) i2s_master: -17681[0m
+[0;32mI (800) i2s_master: 23040[0m
+[0;32mI (803) i2s_master: -26091[0m
+[0;32mI (806) i2s_master: -2594[0m
+[0;32mI (810) i2s_master: -11047[0m
+[0;32mI (813) i2s_master: 26825[0m
+[0;32mI (816) i2s_master: 13594[0m
+[0;32mI (820) i2s_master: 28514[0m
+[0;32mI (823) i2s_master: -3201[0m
+[0;32mI (826) i2s_master: -23072[0m
+[0;32mI (829) i2s_master: -15069[0m
+[0;32mI (833) i2s_master: -2474[0m
+[0;32mI (836) i2s_master: -23828[0m
+[0;32mI (840) i2s_master: -2568[0m
+[0;32mI (944) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (944) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (946) i2s_master: 3[0m
+[0;32mI (949) i2s_master: 3[0m
+[0;32mI (951) i2s_master: 3[0m
+[0;32mI (954) i2s_master: 3[0m
+[0;32mI (957) i2s_master: 3[0m
+[0;32mI (960) i2s_master: 3[0m
+[0;32mI (963) i2s_master: 3[0m
+[0;32mI (966) i2s_master: 3[0m
+[0;32mI (969) i2s_master: 3[0m
+[0;32mI (972) i2s_master: 3[0m
+[0;32mI (975) i2s_master: 3[0m
+[0;32mI (978) i2s_master: 3[0m
+[0;32mI (981) i2s_master: 3[0m
+[0;32mI (984) i2s_master: 3[0m
+[0;32mI (987) i2s_master: 3[0m
+[0;32mI (990) i2s_master: 3[0m
+[0;32mI (993) i2s_master: 3[0m
+[0;32mI (996) i2s_master: 3[0m
+[0;32mI (999) i2s_master: 3[0m
+[0;32mI (1002) i2s_master: 3[0m
+[0;32mI (1005) i2s_master: 3[0m
+[0;32mI (1008) i2s_master: -7085[0m
+[0;32mI (1011) i2s_master: 13467[0m
+[0;32mI (1015) i2s_master: 30910[0m
+[0;32mI (1018) i2s_master: 32577[0m
+[0;32mI (1021) i2s_master: -30122[0m
+[0;32mI (1025) i2s_master: 4057[0m
+[0;32mI (1028) i2s_master: 17112[0m
+[0;32mI (1031) i2s_master: 1289[0m
+[0;32mI (1035) i2s_master: -2868[0m
+[0;32mI (1038) i2s_master: 3968[0m
+[0;32mI (1041) i2s_master: 12120[0m
+[0;32mI (1045) i2s_master: 1524[0m
+[0;32mI (1048) i2s_master: -31007[0m
+[0;32mI (1052) i2s_master: 16317[0m
+[0;32mI (1055) i2s_master: 8433[0m
+[0;32mI (1058) i2s_master: -9771[0m
+[0;32mI (1062) i2s_master: 28053[0m
+[0;32mI (1065) i2s_master: -27926[0m
+[0;32mI (1068) i2s_master: -23997[0m
+[0;32mI (1072) i2s_master: -1880[0m
+[0;32mI (1075) i2s_master: -28106[0m
+[0;32mI (1079) i2s_master: -1194[0m
+[0;32mI (1082) i2s_master: -13473[0m
+[0;32mI (1086) i2s_master: 31772[0m
+[0;32mI (1089) i2s_master: 24464[0m
+[0;32mI (1092) i2s_master: 16566[0m
+[0;32mI (1096) i2s_master: 1911[0m
+[0;32mI (1099) i2s_master: -29161[0m
+[0;32mI (1103) i2s_master: -29087[0m
+[0;32mI (1106) i2s_master: -10922[0m
+[0;32mI (1110) i2s_master: -27150[0m
+[0;32mI (1113) i2s_master: 979[0m
+[0;32mI (1116) i2s_master: -30119[0m
+[0;32mI (1120) i2s_master: 28877[0m
+[0;32mI (1123) i2s_master: 20635[0m
+[0;32mI (1126) i2s_master: 4102[0m
+[0;32mI (1130) i2s_master: 31112[0m
+[0;32mI (1133) i2s_master: -867[0m
+[0;32mI (1136) i2s_master: -31059[0m
+[0;32mI (1140) i2s_master: 3331[0m
+[0;32mI (1143) i2s_master: 28215[0m
+[0;32mI (1147) i2s_master: 24407[0m
+[0;32mI (1150) i2s_master: 32612[0m
+[0;32mI (1153) i2s_master: -32422[0m
+[0;32mI (1157) i2s_master: -4351[0m
+[0;32mI (1160) i2s_master: -17681[0m
+[0;32mI (1164) i2s_master: 23040[0m
+[0;32mI (1167) i2s_master: -26091[0m
+[0;32mI (1171) i2s_master: -2594[0m
+[0;32mI (1174) i2s_master: -11047[0m
+[0;32mI (1177) i2s_master: 26825[0m
+[0;32mI (1181) i2s_master: 13594[0m
+[0;32mI (1184) i2s_master: 28514[0m
+[0;32mI (1188) i2s_master: -3201[0m
+[0;32mI (1191) i2s_master: -23072[0m
+[0;32mI (1194) i2s_master: -15069[0m
+[0;32mI (1198) i2s_master: -2474[0m
+[0;32mI (1201) i2s_master: -23828[0m
+[0;32mI (1205) i2s_master: -2568[0m
+[0;32mI (1274) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1274) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1276) i2s_master: 1[0m
+[0;32mI (1279) i2s_master: 1[0m
+[0;32mI (1282) i2s_master: 1[0m
+[0;32mI (1285) i2s_master: 1[0m
+[0;32mI (1288) i2s_master: 1[0m
+[0;32mI (1291) i2s_master: 1[0m
+[0;32mI (1294) i2s_master: 1[0m
+[0;32mI (1297) i2s_master: 1[0m
+[0;32mI (1300) i2s_master: 1[0m
+[0;32mI (1303) i2s_master: 1[0m
+[0;32mI (1306) i2s_master: 1[0m
+[0;32mI (1309) i2s_master: 1[0m
+[0;32mI (1312) i2s_master: 1[0m
+[0;32mI (1315) i2s_master: 1[0m
+[0;32mI (1318) i2s_master: 1[0m
+[0;32mI (1321) i2s_master: 1[0m
+[0;32mI (1324) i2s_master: 1[0m
+[0;32mI (1327) i2s_master: 1[0m
+[0;32mI (1330) i2s_master: 1[0m
+[0;32mI (1333) i2s_master: 1[0m
+[0;32mI (1337) i2s_master: 1[0m
+[0;32mI (1340) i2s_master: -7085[0m
+[0;32mI (1343) i2s_master: 13467[0m
+[0;32mI (1346) i2s_master: 30910[0m
+[0;32mI (1350) i2s_master: 32577[0m
+[0;32mI (1353) i2s_master: -30122[0m
+[0;32mI (1357) i2s_master: 4057[0m
+[0;32mI (1360) i2s_master: 17112[0m
+[0;32mI (1363) i2s_master: 1289[0m
+[0;32mI (1367) i2s_master: -2868[0m
+[0;32mI (1370) i2s_master: 3968[0m
+[0;32mI (1373) i2s_master: 12120[0m
+[0;32mI (1377) i2s_master: 1524[0m
+[0;32mI (1380) i2s_master: -31007[0m
+[0;32mI (1383) i2s_master: 16317[0m
+[0;32mI (1387) i2s_master: 8433[0m
+[0;32mI (1390) i2s_master: -9771[0m
+[0;32mI (1393) i2s_master: 28053[0m
+[0;32mI (1397) i2s_master: -27926[0m
+[0;32mI (1400) i2s_master: -23997[0m
+[0;32mI (1404) i2s_master: -1880[0m
+[0;32mI (1407) i2s_master: -28106[0m
+[0;32mI (1411) i2s_master: -1194[0m
+[0;32mI (1414) i2s_master: -13473[0m
+[0;32mI (1418) i2s_master: 31772[0m
+[0;32mI (1421) i2s_master: 24464[0m
+[0;32mI (1424) i2s_master: 16566[0m
+[0;32mI (1428) i2s_master: 1911[0m
+[0;32mI (1431) i2s_master: -29161[0m
+[0;32mI (1434) i2s_master: -29087[0m
+[0;32mI (1438) i2s_master: -10922[0m
+[0;32mI (1441) i2s_master: -27150[0m
+[0;32mI (1445) i2s_master: 979[0m
+[0;32mI (1448) i2s_master: -30119[0m
+[0;32mI (1452) i2s_master: 28877[0m
+[0;32mI (1455) i2s_master: 20635[0m
+[0;32mI (1458) i2s_master: 4102[0m
+[0;32mI (1462) i2s_master: 31112[0m
+[0;32mI (1465) i2s_master: -867[0m
+[0;32mI (1468) i2s_master: -31059[0m
+[0;32mI (1472) i2s_master: 3331[0m
+[0;32mI (1475) i2s_master: 28215[0m
+[0;32mI (1478) i2s_master: 24407[0m
+[0;32mI (1482) i2s_master: 32612[0m
+[0;32mI (1485) i2s_master: -32422[0m
+[0;32mI (1489) i2s_master: -4351[0m
+[0;32mI (1492) i2s_master: -17681[0m
+[0;32mI (1496) i2s_master: 23040[0m
+[0;32mI (1499) i2s_master: -26091[0m
+[0;32mI (1502) i2s_master: -2594[0m
+[0;32mI (1506) i2s_master: -11047[0m
+[0;32mI (1509) i2s_master: 26825[0m
+[0;32mI (1513) i2s_master: 13594[0m
+[0;32mI (1516) i2s_master: 28514[0m
+[0;32mI (1519) i2s_master: -3201[0m
+[0;32mI (1523) i2s_master: -23072[0m
+[0;32mI (1526) i2s_master: -15069[0m
+[0;32mI (1530) i2s_master: -2474[0m
+[0;32mI (1533) i2s_master: -23828[0m
+[0;32mI (1537) i2s_master: -2568[0m
+[0;32mI (1634) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1634) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1636) i2s_master: 1[0m
+[0;32mI (1639) i2s_master: 1[0m
+[0;32mI (1642) i2s_master: 1[0m
+[0;32mI (1645) i2s_master: 1[0m
+[0;32mI (1648) i2s_master: 1[0m
+[0;32mI (1651) i2s_master: 1[0m
+[0;32mI (1654) i2s_master: 1[0m
+[0;32mI (1657) i2s_master: 1[0m
+[0;32mI (1660) i2s_master: 1[0m
+[0;32mI (1663) i2s_master: 1[0m
+[0;32mI (1666) i2s_master: 1[0m
+[0;32mI (1669) i2s_master: 1[0m
+[0;32mI (1672) i2s_master: 1[0m
+[0;32mI (1675) i2s_master: 1[0m
+[0;32mI (1678) i2s_master: 1[0m
+[0;32mI (1681) i2s_master: 1[0m
+[0;32mI (1684) i2s_master: 1[0m
+[0;32mI (1687) i2s_master: 1[0m
+[0;32mI (1690) i2s_master: 1[0m
+[0;32mI (1693) i2s_master: 1[0m
+[0;32mI (1697) i2s_master: 1[0m
+[0;32mI (1700) i2s_master: -7085[0m
+[0;32mI (1703) i2s_master: 13467[0m
+[0;32mI (1706) i2s_master: 30910[0m
+[0;32mI (1710) i2s_master: 32577[0m
+[0;32mI (1713) i2s_master: -30122[0m
+[0;32mI (1717) i2s_master: 4057[0m
+[0;32mI (1720) i2s_master: 17112[0m
+[0;32mI (1723) i2s_master: 1289[0m
+[0;32mI (1727) i2s_master: -2868[0m
+[0;32mI (1730) i2s_master: 3968[0m
+[0;32mI (1733) i2s_master: 12120[0m
+[0;32mI (1737) i2s_master: 1524[0m
+[0;32mI (1740) i2s_master: -31007[0m
+[0;32mI (1743) i2s_master: 16317[0m
+[0;32mI (1747) i2s_master: 8433[0m
+[0;32mI (1750) i2s_master: -9771[0m
+[0;32mI (1753) i2s_master: 28053[0m
+[0;32mI (1757) i2s_master: -27926[0m
+[0;32mI (1760) i2s_master: -23997[0m
+[0;32mI (1764) i2s_master: -1880[0m
+[0;32mI (1767) i2s_master: -28106[0m
+[0;32mI (1771) i2s_master: -1194[0m
+[0;32mI (1774) i2s_master: -13473[0m
+[0;32mI (1777) i2s_master: 31772[0m
+[0;32mI (1781) i2s_master: 24464[0m
+[0;32mI (1784) i2s_master: 16566[0m
+[0;32mI (1788) i2s_master: 1911[0m
+[0;32mI (1791) i2s_master: -29161[0m
+[0;32mI (1794) i2s_master: -29087[0m
+[0;32mI (1798) i2s_master: -10922[0m
+[0;32mI (1801) i2s_master: -27150[0m
+[0;32mI (1805) i2s_master: 979[0m
+[0;32mI (1808) i2s_master: -30119[0m
+[0;32mI (1812) i2s_master: 28877[0m
+[0;32mI (1815) i2s_master: 20635[0m
+[0;32mI (1818) i2s_master: 4102[0m
+[0;32mI (1822) i2s_master: 31112[0m
+[0;32mI (1825) i2s_master: -867[0m
+[0;32mI (1828) i2s_master: -31059[0m
+[0;32mI (1832) i2s_master: 3331[0m
+[0;32mI (1835) i2s_master: 28215[0m
+[0;32mI (1838) i2s_master: 24407[0m
+[0;32mI (1842) i2s_master: 32612[0m
+[0;32mI (1845) i2s_master: -32422[0m
+[0;32mI (1849) i2s_master: -4351[0m
+[0;32mI (1852) i2s_master: -17681[0m
+[0;32mI (1856) i2s_master: 23040[0m
+[0;32mI (1859) i2s_master: -26091[0m
+[0;32mI (1862) i2s_master: -2594[0m
+[0;32mI (1866) i2s_master: -11047[0m
+[0;32mI (1869) i2s_master: 26825[0m
+[0;32mI (1873) i2s_master: 13594[0m
+[0;32mI (1876) i2s_master: 28514[0m
+[0;32mI (1879) i2s_master: -3201[0m
+[0;32mI (1883) i2s_master: -23072[0m
+[0;32mI (1886) i2s_master: -15069[0m
+[0;32mI (1890) i2s_master: -2474[0m
+[0;32mI (1893) i2s_master: -23828[0m
+[0;32mI (1897) i2s_master: -2568[0m
+[0;32mI (1964) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1964) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1966) i2s_master: 1[0m
+[0;32mI (1969) i2s_master: 1[0m
+[0;32mI (1972) i2s_master: 1[0m
+[0;32mI (1975) i2s_master: 1[0m
+[0;32mI (1978) i2s_master: 1[0m
+[0;32mI (1981) i2s_master: 1[0m
+[0;32mI (1984) i2s_master: 1[0m
+[0;32mI (1987) i2s_master: 1[0m
+[0;32mI (1990) i2s_master: 1[0m
+[0;32mI (1993) i2s_master: 1[0m
+[0;32mI (1996) i2s_master: 1[0m
+[0;32mI (1999) i2s_master: 1[0m
+[0;32mI (2002) i2s_master: 1[0m
+[0;32mI (2005) i2s_master: 1[0m
+[0;32mI (2008) i2s_master: 1[0m
+[0;32mI (2011) i2s_master: 1[0m
+[0;32mI (2014) i2s_master: 1[0m
+[0;32mI (2017) i2s_master: 1[0m
+[0;32mI (2020) i2s_master: 1[0m
+[0;32mI (2023) i2s_master: 1[0m
+[0;32mI (2027) i2s_master: 1[0m
+[0;32mI (2030) i2s_master: -7085[0m
+[0;32mI (2033) i2s_master: 13467[0m
+[0;32mI (2036) i2s_master: 30910[0m
+[0;32mI (2040) i2s_master: 32577[0m
+[0;32mI (2043) i2s_master: -30122[0m
+[0;32mI (2047) i2s_master: 4057[0m
+[0;32mI (2050) i2s_master: 17112[0m
+[0;32mI (2053) i2s_master: 1289[0m
+[0;32mI (2057) i2s_master: -2868[0m
+[0;32mI (2060) i2s_master: 3968[0m
+[0;32mI (2063) i2s_master: 12120[0m
+[0;32mI (2067) i2s_master: 1524[0m
+[0;32mI (2070) i2s_master: -31007[0m
+[0;32mI (2073) i2s_master: 16317[0m
+[0;32mI (2077) i2s_master: 8433[0m
+[0;32mI (2080) i2s_master: -9771[0m
+[0;32mI (2083) i2s_master: 28053[0m
+[0;32mI (2087) i2s_master: -27926[0m
+[0;32mI (2090) i2s_master: -23997[0m
+[0;32mI (2094) i2s_master: -1880[0m
+[0;32mI (2097) i2s_master: -28106[0m
+[0;32mI (2101) i2s_master: -1194[0m
+[0;32mI (2104) i2s_master: -13473[0m
+[0;32mI (2108) i2s_master: 31772[0m
+[0;32mI (2111) i2s_master: 24464[0m
+[0;32mI (2114) i2s_master: 16566[0m
+[0;32mI (2118) i2s_master: 1911[0m
+[0;32mI (2121) i2s_master: -29161[0m
+[0;32mI (2124) i2s_master: -29087[0m
+[0;32mI (2128) i2s_master: -10922[0m
+[0;32mI (2131) i2s_master: -27150[0m
+[0;32mI (2135) i2s_master: 979[0m
+[0;32mI (2138) i2s_master: -30119[0m
+[0;32mI (2142) i2s_master: 28877[0m
+[0;32mI (2145) i2s_master: 20635[0m
+[0;32mI (2148) i2s_master: 4102[0m
+[0;32mI (2152) i2s_master: 31112[0m
+[0;32mI (2155) i2s_master: -867[0m
+[0;32mI (2158) i2s_master: -31059[0m
+[0;32mI (2162) i2s_master: 3331[0m
+[0;32mI (2165) i2s_master: 28215[0m
+[0;32mI (2168) i2s_master: 24407[0m
+[0;32mI (2172) i2s_master: 32612[0m
+[0;32mI (2175) i2s_master: -32422[0m

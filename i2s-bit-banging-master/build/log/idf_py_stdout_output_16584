@@ -1,0 +1,478 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 10:09:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b10ch ( 45324) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b134 vaddr=3fc91b00 size=023a8h (  9128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d4e4 vaddr=40374000 size=02b34h ( 11060) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d5a8h (120232) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d5d0 vaddr=40376b34 size=0afb8h ( 44984) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (193) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
+[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
+[0;32mI (210) cpu_start: ELF file SHA256:  4bab860b3dfb3d55...[0m
+[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (291) app_start: Starting scheduler on CPU0[0m
+[0;32mI (295) app_start: Starting scheduler on CPU1[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (314) i2s_master: i2s driver init success[0m
+[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
+[0;32mI (569) i2s_master: bytesRead: 4092, bytesToRead: 2046, cursor: 0[0m
+[0;32mI (825) i2s_master: bytesRead: 4092, bytesToRead: 2046, cursor: 2046[0m
+[0;32mI (1081) i2s_master: bytesRead: 4092, bytesToRead: 2046, cursor: 4092[0m
+[0;32mI (1337) i2s_master: bytesRead: 3724, bytesToRead: 1862, cursor: 6138[0m
+[0;32mI (1337) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1339) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1346) i2s_master: 0x00 [0m
+[0;32mI (1349) i2s_master: 0x01 [0m
+[0;32mI (1353) i2s_master: 0x01 [0m
+[0;32mI (1356) i2s_master: 0x01 [0m
+[0;32mI (1359) i2s_master: 0x01 [0m
+[0;32mI (1363) i2s_master: 0x01 [0m
+[0;32mI (1366) i2s_master: 0x01 [0m
+[0;32mI (1370) i2s_master: 0x01 [0m
+[0;32mI (1373) i2s_master: 0x01 [0m
+[0;32mI (1376) i2s_master: 0x01 [0m
+[0;32mI (1380) i2s_master: 0x01 [0m
+[0;32mI (1383) i2s_master: 0x01 [0m
+[0;32mI (1387) i2s_master: 0x01 [0m
+[0;32mI (1390) i2s_master: 0x01 [0m
+[0;32mI (1393) i2s_master: 0x01 [0m
+[0;32mI (1397) i2s_master: 0x01 [0m
+[0;32mI (1400) i2s_master: 0x01 [0m
+[0;32mI (1403) i2s_master: 0x01 [0m
+[0;32mI (1407) i2s_master: 0x01 [0m
+[0;32mI (1410) i2s_master: 0x01 [0m
+[0;32mI (1414) i2s_master: 0x01 [0m
+[0;32mI (1417) i2s_master: 0x01 [0m
+[0;32mI (1420) i2s_master: 0x01 [0m
+[0;32mI (1424) i2s_master: 0x01 [0m
+[0;32mI (1427) i2s_master: 0x01 [0m
+[0;32mI (1431) i2s_master: 0x01 [0m
+[0;32mI (1434) i2s_master: 0x01 [0m
+[0;32mI (1437) i2s_master: 0x01 [0m
+[0;32mI (1441) i2s_master: 0x01 [0m
+[0;32mI (1444) i2s_master: 0x01 [0m
+[0;32mI (1447) i2s_master: 0x01 [0m
+[0;32mI (1451) i2s_master: 0x01 [0m
+[0;32mI (1454) i2s_master: 0x01 [0m
+[0;32mI (1458) i2s_master: 0x01 [0m
+[0;32mI (1461) i2s_master: 0x01 [0m
+[0;32mI (1464) i2s_master: 0x01 [0m
+[0;32mI (1468) i2s_master: 0x01 [0m
+[0;32mI (1471) i2s_master: 0x01 [0m
+[0;32mI (1475) i2s_master: 0x01 [0m
+[0;32mI (1478) i2s_master: 0x01 [0m
+[0;32mI (1481) i2s_master: 0x01 [0m
+[0;32mI (1485) i2s_master: 0x01 [0m
+[0;32mI (1488) i2s_master: 0x01 [0m
+[0;32mI (1491) i2s_master: 0x01 [0m
+[0;32mI (1495) i2s_master: 0x01 [0m
+[0;32mI (1498) i2s_master: 0x01 [0m
+[0;32mI (1502) i2s_master: 0x01 [0m
+[0;32mI (1505) i2s_master: 0x01 [0m
+[0;32mI (1508) i2s_master: 0x01 [0m
+[0;32mI (1512) i2s_master: 0x01 [0m
+[0;32mI (1515) i2s_master: 0x01 [0m
+[0;32mI (1519) i2s_master: 0x01 [0m
+[0;32mI (1522) i2s_master: 0x01 [0m
+[0;32mI (1525) i2s_master: 0x01 [0m
+[0;32mI (1529) i2s_master: 0x01 [0m
+[0;32mI (1532) i2s_master: 0x01 [0m
+[0;32mI (1535) i2s_master: 0x01 [0m
+[0;32mI (1539) i2s_master: 0x01 [0m
+[0;32mI (1542) i2s_master: 0x01 [0m
+[0;32mI (1546) i2s_master: 0x01 [0m
+[0;32mI (1549) i2s_master: 0x01 [0m
+[0;32mI (1552) i2s_master: 0x01 [0m
+[0;32mI (1556) i2s_master: 0x01 [0m
+[0;32mI (1559) i2s_master: 0x01 [0m
+[0;32mI (1563) i2s_master: 0x01 [0m
+[0;32mI (1566) i2s_master: 0x01 [0m
+[0;32mI (1569) i2s_master: 0x01 [0m
+[0;32mI (1573) i2s_master: 0x01 [0m
+[0;32mI (1576) i2s_master: 0x01 [0m
+[0;32mI (1579) i2s_master: 0x01 [0m
+[0;32mI (1583) i2s_master: 0x01 [0m
+[0;32mI (1586) i2s_master: 0x01 [0m
+[0;32mI (1590) i2s_master: 0x01 [0m
+[0;32mI (1593) i2s_master: 0x01 [0m
+[0;32mI (1596) i2s_master: 0x01 [0m
+[0;32mI (1600) i2s_master: 0x01 [0m
+[0;32mI (1603) i2s_master: 0x01 [0m
+[0;32mI (1607) i2s_master: 0x01 [0m
+[0;32mI (1610) i2s_master: 0x01 [0m
+[0;32mI (1613) i2s_master: 0x01 [0m
+[0;32mI (1617) i2s_master: 0x01 [0m
+[0;32mI (1620) i2s_master: 0x01 [0m
+[0;32mI (1623) i2s_master: 0x01 [0m
+[0;32mI (1627) i2s_master: 0x01 [0m
+[0;32mI (1630) i2s_master: 0x01 [0m
+[0;32mI (1634) i2s_master: 0x01 [0m
+[0;32mI (1637) i2s_master: 0x01 [0m
+[0;32mI (1640) i2s_master: 0x01 [0m
+[0;32mI (1644) i2s_master: 0x01 [0m
+[0;32mI (1647) i2s_master: 0x01 [0m
+[0;32mI (1651) i2s_master: 0x01 [0m
+[0;32mI (1654) i2s_master: 0x01 [0m
+[0;32mI (1657) i2s_master: 0x01 [0m
+[0;32mI (1661) i2s_master: 0x01 [0m
+[0;32mI (1664) i2s_master: 0x01 [0m
+[0;32mI (1667) i2s_master: 0x01 [0m
+[0;32mI (1671) i2s_master: 0x01 [0m
+[0;32mI (1674) i2s_master: 0x01 [0m
+[0;32mI (1678) i2s_master: 0x01 [0m
+[0;32mI (1681) i2s_master: 0x01 [0m
+[0;32mI (1684) i2s_master: 0x01 [0m
+[0;32mI (1688) i2s_master: 0x01 [0m
+[0;32mI (1691) i2s_master: 0x01 [0m
+[0;32mI (1695) i2s_master: 0x01 [0m
+[0;32mI (1698) i2s_master: 0x01 [0m
+[0;32mI (1701) i2s_master: 0x01 [0m
+[0;32mI (1705) i2s_master: 0x01 [0m
+[0;32mI (1708) i2s_master: 0x01 [0m
+[0;32mI (1712) i2s_master: 0x01 [0m
+[0;32mI (1715) i2s_master: 0x01 [0m
+[0;32mI (1718) i2s_master: 0x01 [0m
+[0;32mI (1722) i2s_master: 0x01 [0m
+[0;32mI (1725) i2s_master: 0x01 [0m
+[0;32mI (1728) i2s_master: 0x01 [0m
+[0;32mI (1732) i2s_master: 0x01 [0m
+[0;32mI (1735) i2s_master: 0x01 [0m
+[0;32mI (1739) i2s_master: 0x01 [0m
+[0;32mI (1742) i2s_master: 0x01 [0m
+[0;32mI (1745) i2s_master: 0x01 [0m
+[0;32mI (1749) i2s_master: 0x01 [0m
+[0;32mI (1752) i2s_master: 0x01 [0m
+[0;32mI (1756) i2s_master: 0x01 [0m
+[0;32mI (1759) i2s_master: 0x01 [0m
+[0;32mI (1762) i2s_master: 0x01 [0m
+[0;32mI (1766) i2s_master: 0x01 [0m
+[0;32mI (1769) i2s_master: 0x01 [0m
+[0;32mI (1772) i2s_master: 0x01 [0m
+[0;32mI (1776) i2s_master: 0x01 [0m
+[0;32mI (1779) i2s_master: 0x01 [0m
+[0;32mI (1783) i2s_master: 0x01 [0m
+[0;32mI (1786) i2s_master: 0x01 [0m
+[0;32mI (1789) i2s_master: 0x01 [0m
+[0;32mI (1793) i2s_master: 0x01 [0m
+[0;32mI (1796) i2s_master: 0x01 [0m
+[0;32mI (1800) i2s_master: 0x01 [0m
+[0;32mI (1803) i2s_master: 0x01 [0m
+[0;32mI (1806) i2s_master: 0x01 [0m
+[0;32mI (1810) i2s_master: 0x01 [0m
+[0;32mI (1813) i2s_master: 0x01 [0m
+[0;32mI (1816) i2s_master: 0x01 [0m
+[0;32mI (1820) i2s_master: 0x01 [0m
+[0;32mI (1823) i2s_master: 0x01 [0m
+[0;32mI (1827) i2s_master: 0x01 [0m
+[0;32mI (1830) i2s_master: 0x01 [0m
+[0;32mI (1833) i2s_master: 0x01 [0m
+[0;32mI (1837) i2s_master: 0x01 [0m
+[0;32mI (1840) i2s_master: 0x01 [0m
+[0;32mI (1844) i2s_master: 0x01 [0m
+[0;32mI (1847) i2s_master: 0x01 [0m
+[0;32mI (1850) i2s_master: 0x01 [0m
+[0;32mI (1854) i2s_master: 0x01 [0m
+[0;32mI (1857) i2s_master: 0x01 [0m
+[0;32mI (1860) i2s_master: 0x01 [0m
+[0;32mI (1864) i2s_master: 0x01 [0m
+[0;32mI (1867) i2s_master: 0x01 [0m
+[0;32mI (1871) i2s_master: 0x01 [0m
+[0;32mI (1874) i2s_master: 0x01 [0m
+[0;32mI (1877) i2s_master: 0x01 [0m
+[0;32mI (1881) i2s_master: 0x01 [0m
+[0;32mI (1884) i2s_master: 0x01 [0m
+[0;32mI (1888) i2s_master: 0x01 [0m
+[0;32mI (1891) i2s_master: 0x01 [0m
+[0;32mI (1894) i2s_master: 0x01 [0m
+[0;32mI (1898) i2s_master: 0x01 [0m
+[0;32mI (1901) i2s_master: 0x01 [0m
+[0;32mI (1904) i2s_master: 0x01 [0m
+[0;32mI (1908) i2s_master: 0x01 [0m
+[0;32mI (1911) i2s_master: 0x01 [0m
+[0;32mI (1915) i2s_master: 0x01 [0m
+[0;32mI (1918) i2s_master: 0x01 [0m
+[0;32mI (1921) i2s_master: 0x01 [0m
+[0;32mI (1925) i2s_master: 0x01 [0m
+[0;32mI (1928) i2s_master: 0x01 [0m
+[0;32mI (1932) i2s_master: 0x01 [0m
+[0;32mI (1935) i2s_master: 0x01 [0m
+[0;32mI (1938) i2s_master: 0x01 [0m
+[0;32mI (1942) i2s_master: 0x01 [0m
+[0;32mI (1945) i2s_master: 0x01 [0m
+[0;32mI (1948) i2s_master: 0x01 [0m
+[0;32mI (1952) i2s_master: 0x01 [0m
+[0;32mI (1955) i2s_master: 0x01 [0m
+[0;32mI (1959) i2s_master: 0x01 [0m
+[0;32mI (1962) i2s_master: 0x01 [0m
+[0;32mI (1965) i2s_master: 0x01 [0m
+[0;32mI (1969) i2s_master: 0x01 [0m
+[0;32mI (1972) i2s_master: 0x01 [0m
+[0;32mI (1976) i2s_master: 0x01 [0m
+[0;32mI (1979) i2s_master: 0x01 [0m
+[0;32mI (1982) i2s_master: 0x01 [0m
+[0;32mI (1986) i2s_master: 0x01 [0m
+[0;32mI (1989) i2s_master: 0x01 [0m
+[0;32mI (1992) i2s_master: 0x01 [0m
+[0;32mI (1996) i2s_master: 0x01 [0m
+[0;32mI (1999) i2s_master: 0x01 [0m
+[0;32mI (2003) i2s_master: 0x01 [0m
+[0;32mI (2006) i2s_master: 0x01 [0m
+[0;32mI (2009) i2s_master: 0x01 [0m
+[0;32mI (2013) i2s_master: 0x01 [0m
+[0;32mI (2016) i2s_master: 0x01 [0m
+[0;32mI (2020) i2s_master: 0x01 [0m
+[0;32mI (2023) i2s_master: 0x01 [0m
+[0;32mI (2026) i2s_master: 0x01 [0m
+[0;32mI (2030) i2s_master: 0x01 [0m
+[0;32mI (2033) i2s_master: 0x01 [0m
+[0;32mI (2036) i2s_master: 0x01 [0m
+[0;32mI (2040) i2s_master: 0x01 [0m
+[0;32mI (2043) i2s_master: 0x01 [0m
+[0;32mI (2047) i2s_master: 0x01 [0m
+[0;32mI (2050) i2s_master: 0x01 [0m
+[0;32mI (2053) i2s_master: 0x01 [0m
+[0;32mI (2057) i2s_master: 0x01 [0m
+[0;32mI (2060) i2s_master: 0x01 [0m
+[0;32mI (2064) i2s_master: 0x01 [0m
+[0;32mI (2067) i2s_master: 0x01 [0m
+[0;32mI (2070) i2s_master: 0x01 [0m
+[0;32mI (2074) i2s_master: 0x01 [0m
+[0;32mI (2077) i2s_master: 0x01 [0m
+[0;32mI (2080) i2s_master: 0x01 [0m
+[0;32mI (2084) i2s_master: 0x01 [0m
+[0;32mI (2087) i2s_master: 0x01 [0m
+[0;32mI (2091) i2s_master: 0x01 [0m
+[0;32mI (2094) i2s_master: 0x01 [0m
+[0;32mI (2097) i2s_master: 0x01 [0m
+[0;32mI (2101) i2s_master: 0x01 [0m
+[0;32mI (2104) i2s_master: 0x01 [0m
+[0;32mI (2108) i2s_master: 0x01 [0m
+[0;32mI (2111) i2s_master: 0x01 [0m
+[0;32mI (2114) i2s_master: 0x01 [0m
+[0;32mI (2118) i2s_master: 0x01 [0m
+[0;32mI (2121) i2s_master: 0x01 [0m
+[0;32mI (2124) i2s_master: 0x01 [0m
+[0;32mI (2128) i2s_master: 0x01 [0m
+[0;32mI (2131) i2s_master: 0x01 [0m
+[0;32mI (2135) i2s_master: 0x01 [0m
+[0;32mI (2138) i2s_master: 0x01 [0m
+[0;32mI (2141) i2s_master: 0x01 [0m
+[0;32mI (2145) i2s_master: 0x01 [0m
+[0;32mI (2148) i2s_master: 0x01 [0m
+[0;32mI (2152) i2s_master: 0x01 [0m
+[0;32mI (2155) i2s_master: 0x01 [0m
+[0;32mI (2158) i2s_master: 0x01 [0m
+[0;32mI (2162) i2s_master: 0x01 [0m
+[0;32mI (2165) i2s_master: 0x01 [0m
+[0;32mI (2168) i2s_master: 0x01 [0m
+[0;32mI (2172) i2s_master: 0x01 [0m
+[0;32mI (2175) i2s_master: 0x01 [0m
+[0;32mI (2179) i2s_master: 0x01 [0m
+[0;32mI (2182) i2s_master: 0x01 [0m
+[0;32mI (2185) i2s_master: 0x01 [0m
+[0;32mI (2189) i2s_master: 0x01 [0m
+[0;32mI (2192) i2s_master: 0x01 [0m
+[0;32mI (2196) i2s_master: 0x01 [0m
+[0;32mI (2199) i2s_master: 0x01 [0m
+[0;32mI (2202) i2s_master: 0x01 [0m
+[0;32mI (2206) i2s_master: 0x01 [0m
+[0;32mI (2209) i2s_master: 0x01 [0m
+[0;32mI (2212) i2s_master: 0x01 [0m
+[0;32mI (2216) i2s_master: 0x01 [0m
+[0;32mI (2219) i2s_master: 0x01 [0m
+[0;32mI (2223) i2s_master: 0x01 [0m
+[0;32mI (2226) i2s_master: 0x01 [0m
+[0;32mI (2229) i2s_master: 0x01 [0m
+[0;32mI (2233) i2s_master: 0x01 [0m
+[0;32mI (2236) i2s_master: 0x01 [0m
+[0;32mI (2240) i2s_master: 0x01 [0m
+[0;32mI (2243) i2s_master: 0x01 [0m
+[0;32mI (2246) i2s_master: 0x01 [0m
+[0;32mI (2250) i2s_master: 0x01 [0m
+[0;32mI (2253) i2s_master: 0x01 [0m
+[0;32mI (2257) i2s_master: 0x01 [0m
+[0;32mI (2260) i2s_master: 0x01 [0m
+[0;32mI (2263) i2s_master: 0x01 [0m
+[0;32mI (2267) i2s_master: 0x01 [0m
+[0;32mI (2270) i2s_master: 0x01 [0m
+[0;32mI (2273) i2s_master: 0x01 [0m
+[0;32mI (2277) i2s_master: 0x01 [0m
+[0;32mI (2280) i2s_master: 0x01 [0m
+[0;32mI (2284) i2s_master: 0x01 [0m
+[0;32mI (2287) i2s_master: 0x01 [0m
+[0;32mI (2290) i2s_master: 0x01 [0m
+[0;32mI (2294) i2s_master: 0x01 [0m
+[0;32mI (2297) i2s_master: 0x01 [0m
+[0;32mI (2301) i2s_master: 0x01 [0m
+[0;32mI (2304) i2s_master: 0x01 [0m
+[0;32mI (2307) i2s_master: 0x01 [0m
+[0;32mI (2311) i2s_master: 0x01 [0m
+[0;32mI (2314) i2s_master: 0x01 [0m
+[0;32mI (2317) i2s_master: 0x01 [0m
+[0;32mI (2321) i2s_master: 0x01 [0m
+[0;32mI (2324) i2s_master: 0x01 [0m
+[0;32mI (2328) i2s_master: 0x01 [0m
+[0;32mI (2331) i2s_master: 0x01 [0m
+[0;32mI (2334) i2s_master: 0x01 [0m
+[0;32mI (2338) i2s_master: 0x01 [0m
+[0;32mI (2341) i2s_master: 0x01 [0m
+[0;32mI (2345) i2s_master: 0x01 [0m
+[0;32mI (2348) i2s_master: 0x01 [0m
+[0;32mI (2351) i2s_master: 0x01 [0m
+[0;32mI (2355) i2s_master: 0x01 [0m
+[0;32mI (2358) i2s_master: 0x01 [0m
+[0;32mI (2361) i2s_master: 0x01 [0m
+[0;32mI (2365) i2s_master: 0x01 [0m
+[0;32mI (2368) i2s_master: 0x01 [0m
+[0;32mI (2372) i2s_master: 0x01 [0m
+[0;32mI (2375) i2s_master: 0x01 [0m
+[0;32mI (2378) i2s_master: 0x01 [0m
+[0;32mI (2382) i2s_master: 0x01 [0m
+[0;32mI (2385) i2s_master: 0x01 [0m
+[0;32mI (2389) i2s_master: 0x01 [0m
+[0;32mI (2392) i2s_master: 0x01 [0m
+[0;32mI (2395) i2s_master: 0x01 [0m
+[0;32mI (2399) i2s_master: 0x01 [0m
+[0;32mI (2402) i2s_master: 0x01 [0m
+[0;32mI (2405) i2s_master: 0x01 [0m
+[0;32mI (2409) i2s_master: 0x01 [0m
+[0;32mI (2412) i2s_master: 0x01 [0m
+[0;32mI (2416) i2s_master: 0x01 [0m
+[0;32mI (2419) i2s_master: 0x01 [0m
+[0;32mI (2422) i2s_master: 0x01 [0m
+[0;32mI (2426) i2s_master: 0x01 [0m
+[0;32mI (2429) i2s_master: 0x01 [0m
+[0;32mI (2433) i2s_master: 0x01 [0m
+[0;32mI (2436) i2s_master: 0x01 [0m
+[0;32mI (2439) i2s_master: 0x01 [0m
+[0;32mI (2443) i2s_master: 0x01 [0m
+[0;32mI (2446) i2s_master: 0x01 [0m
+[0;32mI (2449) i2s_master: 0x01 [0m
+[0;32mI (2453) i2s_master: 0x01 [0m
+[0;32mI (2456) i2s_master: 0x01 [0m
+[0;32mI (2460) i2s_master: 0x01 [0m
+[0;32mI (2463) i2s_master: 0x01 [0m
+[0;32mI (2466) i2s_master: 0x01 [0m
+[0;32mI (2470) i2s_master: 0x01 [0m
+[0;32mI (2473) i2s_master: 0x01 [0m
+[0;32mI (2477) i2s_master: 0x01 [0m
+[0;32mI (2480) i2s_master: 0x01 [0m
+[0;32mI (2483) i2s_master: 0x01 [0m
+[0;32mI (2487) i2s_master: 0x01 [0m
+[0;32mI (2490) i2s_master: 0x01 [0m
+[0;32mI (2493) i2s_master: 0x01 [0m
+[0;32mI (2497) i2s_master: 0x01 [0m
+[0;32mI (2500) i2s_master: 0x01 [0m
+[0;32mI (2504) i2s_master: 0x01 [0m
+[0;32mI (2507) i2s_master: 0x01 [0m
+[0;32mI (2510) i2s_master: 0x01 [0m
+[0;32mI (2514) i2s_master: 0x01 [0m
+[0;32mI (2517) i2s_master: 0x01 [0m
+[0;32mI (2521) i2s_master: 0x01 [0m
+[0;32mI (2524) i2s_master: 0x01 [0m
+[0;32mI (2527) i2s_master: 0x01 [0m
+[0;32mI (2531) i2s_master: 0x01 [0m
+[0;32mI (2534) i2s_master: 0x01 [0m
+[0;32mI (2537) i2s_master: 0x01 [0m
+[0;32mI (2541) i2s_master: 0x01 [0m
+[0;32mI (2544) i2s_master: 0x01 [0m
+[0;32mI (2548) i2s_master: 0x01 [0m
+[0;32mI (2551) i2s_master: 0x01 [0m
+[0;32mI (2554) i2s_master: 0x01 [0m
+[0;32mI (2558) i2s_master: 0x01 [0m
+[0;32mI (2561) i2s_master: 0x01 [0m
+[0;32mI (2565) i2s_master: 0x01 [0m
+[0;32mI (2568) i2s_master: 0x01 [0m
+[0;32mI (2571) i2s_master: 0x01 [0m
+[0;32mI (2575) i2s_master: 0x01 [0m
+[0;32mI (2578) i2s_master: 0x01 [0m
+[0;32mI (2581) i2s_master: 0x01 [0m
+[0;32mI (2585) i2s_master: 0x01 [0m
+[0;32mI (2588) i2s_master: 0x01 [0m
+[0;32mI (2592) i2s_master: 0x01 [0m
+[0;32mI (2595) i2s_master: 0x01 [0m
+[0;32mI (2598) i2s_master: 0x01 [0m
+[0;32mI (2602) i2s_master: 0x01 [0m
+[0;32mI (2605) i2s_master: 0x01 [0m
+[0;32mI (2609) i2s_master: 0x01 [0m
+[0;32mI (2612) i2s_master: 0x01 [0m
+[0;32mI (2615) i2s_master: 0x01 [0m
+[0;32mI (2619) i2s_master: 0x01 [0m
+[0;32mI (2622) i2s_master: 0x01 [0m
+[0;32mI (2625) i2s_master: 0x01 [0m
+[0;32mI (2629) i2s_master: 0x01 [0m
+[0;32mI (2632) i2s_master: 0x01 [0m
+[0;32mI (2636) i2s_master: 0x01 [0m
+[0;32mI (2639) i2s_master: 0x01 [0m
+[0;32mI (2642) i2s_master: 0x01 [0m
+[0;32mI (2646) i2s_master: 0x01 [0m
+[0;32mI (2649) i2s_master: 0x01 [0m
+[0;32mI (2653) i2s_master: 0x01 [0m
+[0;32mI (2656) i2s_master: 0x01 [0m
+[0;32mI (2659) i2s_master: 0x01 [0m
+[0;32mI (2663) i2s_master: 0x01 [0m
+[0;32mI (2666) i2s_master: 0x01 [0m
+[0;32mI (2669) i2s_master: 0x01 [0m
+[0;32mI (2673) i2s_master: 0x01 [0m
+[0;32mI (2676) i2s_master: 0x01 [0m
+[0;32mI (2680) i2s_master: 0x01 [0m
+[0;32mI (2683) i2s_master: 0x01 [0m
+[0;32mI (2686) i2s_master: 0x01 [0m
+[0;32mI (2690) i2s_master: 0x01 [0m
+[0;32mI (2693) i2s_master: 0x01 [0m
+[0;32mI (2697) i2s_master: 0x01 [0m
+[0;32mI (2700) i2s_master: bytesRead: 4092, bytesToRead: 2046, cursor: 0[0m
+[0;32mI (2707) i2s_master: bytesRead: 4092, bytesToRead: 2046, cursor: 2046[0m
+[0;32mI (2714) i2s_master: bytesRead: 4092, bytesToRead: 2046, cursor: 4092[0m
+[0;32mI (2871) i2s_master: bytesRead: 3724, bytesToRead: 1862, cursor: 6138[0m
+[0;32mI (2871) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (2874) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (2880) i2s_master: 0x05 [0m
+[0;32mI (2884) i2s_master: 0x05 [0m
+[0;32mI (2887) i2s_master: 0x05 [0m
+[0;32mI (2891) i2s_master: 0x05 [0m
+[0;32mI (2894) i2s_master: 0x05 [0m

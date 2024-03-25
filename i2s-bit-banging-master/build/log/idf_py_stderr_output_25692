@@ -1,0 +1,39 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM15 instead...[0m
+[0;33m--- idf_monitor on \\.\COM15 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403751e8: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40378b21: gdma_ll_rx_get_interrupt_status at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/hal/esp32s3/include/hal/gdma_ll.h:71
+ (inlined by) gdma_default_rx_isr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/gdma.c:758
+[0m
+[0;33m0x4037710c: _xt_lowint1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1118
+[0m
+[0;33m0x4037a4da: _frxt_int_enter at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:101
+[0m
+[0;33m0x4200da20: _cleanup_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32s3-elf/src/newlib/newlib/libc/stdio/findfp.c:205
+[0m
+[0;33m0x40378b1e: gdma_ll_rx_get_interrupt_status at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/hal/esp32s3/include/hal/gdma_ll.h:71
+ (inlined by) gdma_default_rx_isr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/gdma.c:758
+[0m
+[0;33m0x40377109: _xt_lowint1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1118
+[0m
+[0;33m0x40378d17: xt_utils_wait_for_intr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/cpu.c:101
+[0m
+[0;33m0x4200254a: esp_vApplicationIdleHook at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/freertos_hooks.c:59
+[0m
+[0;33m0x4037bb4d: prvIdleTask at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/tasks.c:4157 (discriminator 1)
+[0m
+[0;33m0x4037a161: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0;33m0x40375749: esp_restart_noos_dig at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:64 (discriminator 1)
+[0m
+[0;33m0x403751e8: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x40378b21: gdma_ll_rx_get_interrupt_status at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/hal/esp32s3/include/hal/gdma_ll.h:71
+ (inlined by) gdma_default_rx_isr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/gdma.c:758
+[0m
+[0;33m0x4037710c: _xt_lowint1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1118
+[0m
+[0m

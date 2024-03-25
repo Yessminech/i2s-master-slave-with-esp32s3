@@ -1,0 +1,300 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 10:09:29[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0fch ( 45308) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b124 vaddr=3fc91b00 size=023a8h (  9128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d4d4 vaddr=40374000 size=02b44h ( 11076) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d598h (120216) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d5c0 vaddr=40376b44 size=0afa8h ( 44968) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
+[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
+[0;32mI (210) cpu_start: ELF file SHA256:  52b103d59db8fe76...[0m
+[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (291) app_start: Starting scheduler on CPU0[0m
+[0;32mI (295) app_start: Starting scheduler on CPU1[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (314) i2s_master: i2s driver init success[0m
+[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
+[0;31mE (824) i2s_master: bytesRead8000, bytesToRead8000, cursor8000[0m
+[0;32mI (824) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (825) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (832) i2s_master: 1[0m
+[0;32mI (835) i2s_master: 1[0m
+[0;32mI (838) i2s_master: 1[0m
+[0;32mI (841) i2s_master: 1[0m
+[0;32mI (844) i2s_master: 1[0m
+[0;32mI (847) i2s_master: 1[0m
+[0;32mI (850) i2s_master: 1[0m
+[0;32mI (853) i2s_master: 1[0m
+[0;32mI (856) i2s_master: 1[0m
+[0;32mI (859) i2s_master: 1[0m
+[0;32mI (862) i2s_master: 1[0m
+[0;32mI (865) i2s_master: 1[0m
+[0;32mI (868) i2s_master: 1[0m
+[0;32mI (870) i2s_master: 1[0m
+[0;32mI (873) i2s_master: 1[0m
+[0;32mI (876) i2s_master: 1[0m
+[0;32mI (879) i2s_master: 1[0m
+[0;32mI (882) i2s_master: 1[0m
+[0;32mI (885) i2s_master: 1[0m
+[0;32mI (888) i2s_master: 1[0m
+[0;32mI (891) i2s_master: 1[0m
+[0;32mI (894) i2s_master: 1[0m
+[0;32mI (897) i2s_master: 1[0m
+[0;32mI (900) i2s_master: 1[0m
+[0;32mI (903) i2s_master: 1[0m
+[0;32mI (906) i2s_master: 1[0m
+[0;32mI (909) i2s_master: 1[0m
+[0;32mI (912) i2s_master: 1[0m
+[0;32mI (915) i2s_master: 1[0m
+[0;32mI (918) i2s_master: 1[0m
+[0;32mI (921) i2s_master: 1[0m
+[0;32mI (924) i2s_master: 1[0m
+[0;32mI (927) i2s_master: 1[0m
+[0;32mI (930) i2s_master: 1[0m
+[0;32mI (932) i2s_master: 1[0m
+[0;32mI (935) i2s_master: 1[0m
+[0;32mI (938) i2s_master: 1[0m
+[0;32mI (941) i2s_master: 1[0m
+[0;32mI (944) i2s_master: 1[0m
+[0;32mI (947) i2s_master: 1[0m
+[0;32mI (950) i2s_master: 36[0m
+[0;32mI (953) i2s_master: -23131[0m
+[0;32mI (957) i2s_master: -23131[0m
+[0;32mI (960) i2s_master: -23131[0m
+[0;32mI (963) i2s_master: -23131[0m
+[0;32mI (967) i2s_master: -23131[0m
+[0;32mI (970) i2s_master: -23131[0m
+[0;32mI (974) i2s_master: -23131[0m
+[0;32mI (977) i2s_master: -23131[0m
+[0;32mI (980) i2s_master: -23131[0m
+[0;32mI (984) i2s_master: -23131[0m
+[0;32mI (987) i2s_master: -23131[0m
+[0;32mI (990) i2s_master: -23131[0m
+[0;32mI (994) i2s_master: -23131[0m
+[0;32mI (997) i2s_master: -23131[0m
+[0;32mI (1001) i2s_master: -23131[0m
+[0;32mI (1004) i2s_master: -23131[0m
+[0;32mI (1008) i2s_master: -23131[0m
+[0;32mI (1011) i2s_master: -23131[0m
+[0;32mI (1014) i2s_master: -23131[0m
+[0;32mI (1018) i2s_master: -23131[0m
+[0;32mI (1021) i2s_master: -23131[0m
+[0;32mI (1025) i2s_master: -23131[0m
+[0;32mI (1028) i2s_master: -23131[0m
+[0;32mI (1032) i2s_master: -23131[0m
+[0;32mI (1035) i2s_master: -23131[0m
+[0;32mI (1039) i2s_master: -23131[0m
+[0;32mI (1042) i2s_master: -23131[0m
+[0;32mI (1046) i2s_master: -23131[0m
+[0;32mI (1049) i2s_master: -23131[0m
+[0;32mI (1053) i2s_master: -23131[0m
+[0;32mI (1056) i2s_master: -23131[0m
+[0;32mI (1060) i2s_master: -23131[0m
+[0;32mI (1063) i2s_master: -23131[0m
+[0;32mI (1067) i2s_master: -23131[0m
+[0;32mI (1070) i2s_master: -23131[0m
+[0;32mI (1074) i2s_master: -23131[0m
+[0;32mI (1077) i2s_master: -23131[0m
+[0;32mI (1080) i2s_master: -23131[0m
+[0;32mI (1084) i2s_master: -23131[0m
+[0;31mE (1424) i2s_master: bytesRead8000, bytesToRead8000, cursor8000[0m
+[0;32mI (1424) i2s_master: Acquisition ok! Setting flag to DONE..[0m
+[0;32mI (1425) i2s_master: Task notified end of acquisition successfully.[0m
+[0;32mI (1432) i2s_master: 1[0m
+[0;32mI (1435) i2s_master: 1[0m
+[0;32mI (1438) i2s_master: 1[0m
+[0;32mI (1441) i2s_master: 1[0m
+[0;32mI (1445) i2s_master: 1[0m
+[0;32mI (1448) i2s_master: 1[0m
+[0;32mI (1451) i2s_master: 1[0m
+[0;32mI (1454) i2s_master: 1[0m
+[0;32mI (1457) i2s_master: 1[0m
+[0;32mI (1460) i2s_master: 1[0m
+[0;32mI (1463) i2s_master: 1[0m
+[0;32mI (1466) i2s_master: 1[0m
+[0;32mI (1469) i2s_master: 1[0m
+[0;32mI (1472) i2s_master: 1[0m
+[0;32mI (1475) i2s_master: 1[0m
+[0;32mI (1478) i2s_master: 1[0m
+[0;32mI (1481) i2s_master: 1[0m
+[0;32mI (1484) i2s_master: 1[0m
+[0;32mI (1487) i2s_master: 1[0m
+[0;32mI (1490) i2s_master: 1[0m
+[0;32mI (1493) i2s_master: 1[0m
+[0;32mI (1496) i2s_master: 1[0m
+[0;32mI (1499) i2s_master: 1[0m
+[0;32mI (1502) i2s_master: 1[0m
+[0;32mI (1505) i2s_master: 1[0m
+[0;32mI (1508) i2s_master: 1[0m
+[0;32mI (1511) i2s_master: 1[0m
+[0;32mI (1514) i2s_master: 1[0m
+[0;32mI (1517) i2s_master: 1[0m
+[0;32mI (1520) i2s_master: 1[0m
+[0;32mI (1524) i2s_master: 1[0m
+[0;32mI (1527) i2s_master: 1[0m
+[0;32mI (1530) i2s_master: 1[0m
+[0;32mI (1533) i2s_master: 1[0m
+[0;32mI (1536) i2s_master: 1[0m
+[0;32mI (1539) i2s_master: 1[0m
+[0;32mI (1542) i2s_master: 1[0m
+[0;32mI (1545) i2s_master: 1[0m
+[0;32mI (1548) i2s_master: 1[0m
+[0;32mI (1551) i2s_master: 1[0m
+[0;32mI (1554) i2s_master: 38[0m
+[0;32mI (1557) i2s_master: -23131[0m
+[0;32mI (1560) i2s_master: -23131[0m
+[0;32mI (1564) i2s_master: -23131[0m
+[0;32mI (1567) i2s_master: -23131[0m
+[0;32mI (1571) i2s_master: -23131[0m
+[0;32mI (1574) i2s_master: -23131[0m
+[0;32mI (1578) i2s_master: -23131[0m
+[0;32mI (1581) i2s_master: -23131[0m
+[0;32mI (1585) i2s_master: -23131[0m
+[0;32mI (1588) i2s_master: -23131[0m
+[0;32mI (1592) i2s_master: -23131[0m
+[0;32mI (1595) i2s_master: -23131[0m
+[0;32mI (1599) i2s_master: -23131[0m
+[0;32mI (1602) i2s_master: -23131[0m
+[0;32mI (1606) i2s_master: -23131[0m
+[0;32mI (1609) i2s_master: -23131[0m
+[0;32mI (1613) i2s_master: -23131[0m
+[0;32mI (1616) i2s_master: -23131[0m
+[0;32mI (1620) i2s_master: -23131[0m
+[0;32mI (1623) i2s_master: -23131[0m
+[0;32mI (1626) i2s_master: -23131[0m
+[0;32mI (1630) i2s_master: -23131[0m
+[0;32mI (1633) i2s_master: -23131[0m
+[0;32mI (1637) i2s_master: -23131[0m
+[0;32mI (1640) i2s_master: -23131[0m
+[0;32mI (1644) i2s_master: -23131[0m
+[0;32mI (1647) i2s_master: -23131[0m
+[0;32mI (1651) i2s_master: -23131[0m
+[0;32mI (1654) i2s_master: -23131[0m
+[0;32mI (1658) i2s_master: -23131[0m
+[0;32mI (1661) i2s_master: -23131[0m
+[0;32mI (1665) i2s_master: -23131[0m
+[0;32mI (1668) i2s_master: -23131[0m
+[0;32mI (1672) i2s_master: -23131[0m
+[0;32mI (1675) i2s_master: -23131[0m
+[0;32mI (1679) i2s_master: -23131[0m
+[0;32mI (1682) i2s_master: -23131[0m
+[0;32mI (1685) i2s_master: -23131[0m
+[0;32mI (1689) i2s_master: -23131[0m
+
+assert failed: tlsf_free tlsf.c:1119 (!block_is_free(block) && "block already marked as free")
+
+
+Backtrace: 0x40375dba:0x3fcab210 0x4037a151:0x3fcab230 0x4037fae9:0x3fcab250 0x4037eb4f:0x3fcab370 0x4037e9f8:0x3fcab390 0x403761ee:0x3fcab3b0 0x4037fb19:0x3fcab3d0 0x4200819d:0x3fcab3f0 0x4037a161:0x3fcab410
+
+
+
+
+ELF file SHA256: 52b103d59db8fe76
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375749
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (29) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time 10:09:29[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.1[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (81) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0fch ( 45308) map[0m[0;32mI (109) esp_image: segment 1: paddr=0001b124 vaddr=3fc91b00 size=023a8h (  9128) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001d4d4 vaddr=40374000 size=02b44h ( 11076) load[0m
+[0;32mI (120) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d598h (120216) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=0003d5c0 vaddr=40376b44 size=0afa8h ( 44968) load[0m
+[0;32mI (164) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (175) cpu_start: Multicore app[0m
+[0;32mI (175) cpu_start: Pro cpu up.[0m
+[0;32mI (176) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (194) cpu_start: Pro cpu start user code[0m
+[0;32mI (194) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (194) cpu_start: Application information:[0m
+[0;32mI (197) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (203) cpu_start: App version:      7ec619e-dirty[0m
+[0;32mI (209) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  52b103d59db8fe76...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (226) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (231) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (236) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (260) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (274) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) app_start: Starting scheduler on CPU0[0m
+[0;32mI (300) app_start: Starting scheduler on CPU1[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (319) i2s_master: i2s driver init success[0m
+[0;32mI (323) i2s_master: Collecting 8000 samples...[0m

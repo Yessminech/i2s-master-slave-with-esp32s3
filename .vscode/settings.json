@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "compare": "c",
+        "i2s_std.h": "c",
+        "string.h": "c",
+        "gpio.h": "c"
+    }
+}
