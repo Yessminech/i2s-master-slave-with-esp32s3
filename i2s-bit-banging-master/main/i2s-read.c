@@ -12,7 +12,7 @@
 #define I2S_MASTER_CLK 47
 #define I2S_DATA 48
 #define DMABufferLength (2046)
-#define EXAMPLE_SAMPLE_RATE (8000)
+#define EXAMPLE_SAMPLE_RATE (100000)
 
 static const char err_reason[][30] = {"input param is invalid", "operation timeout"};
 static const char *TAG = "i2s_master";
@@ -99,7 +99,7 @@ void acquisitionTask(void *arg)
         {
             ESP_LOGI(TAG, "Task notified end of acquisition successfully.");
             xEventGroupClearBits(mySample->flags, 15);
-            for (size_t i = 0; i < 2*mySample->totalSize / sizeof(uint16_t); i += 10)
+            for (size_t i = 0; i < 2*mySample->totalSize / sizeof(uint16_t); i += 100)
             {
                 uint16_t value = ((uint16_t)mySample->buffer[i]);
                 ESP_LOGI(TAG, "Sample %zu: 0x%04X", i, value);

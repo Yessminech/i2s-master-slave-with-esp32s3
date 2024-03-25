@@ -1,0 +1,78 @@
+[0/1] Re-running CMake...
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32s3
+-- Project sdkconfig file C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/sdkconfig
+Loading defaults file C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/sdkconfig.defaults...
+-- App "i2s-bit-banging-slave" version: 611b872-dirty
+-- Adding linker script C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_netif esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/app_trace C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/app_update C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/bootloader C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/bootloader_support C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/bt C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/cmock C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/console C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/cxx C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/driver C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/efuse C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp-tls C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_adc C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_app_format C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_common C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_eth C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_event C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_gdbstub C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hid C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_http_client C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_http_server C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_https_ota C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_https_server C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_lcd C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_local_ctrl C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_netif C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_partition C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_phy C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_pm C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_psram C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_ringbuf C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_rom C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_timer C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_wifi C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/espcoredump C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esptool_py C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/fatfs C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/hal C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/heap C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/http_parser C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/idf_test C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/ieee802154 C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/json C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/log C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/lwip C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/main C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/mbedtls C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/mqtt C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/newlib C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/nvs_flash C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/openthread C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/perfmon C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/protobuf-c C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/protocomm C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/pthread C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/sdmmc C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/soc C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/spi_flash C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/spiffs C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/tcp_transport C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/touch_element C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/ulp C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/unity C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/usb C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/vfs C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/wear_levelling C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/wifi_provisioning C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/wpa_supplicant C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build
+[1/12] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\ychabchoub\FW\master-slave-working-1\i2s-bit-banging-slave\build\bootloader\esp-idf\esptool_py && C:\Espressif5.0\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5080 bytes. 0x2f80 bytes (37%) free.
+[2/10] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[3/10] Linking C static library esp-idf\esp_app_format\libesp_app_format.a
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/i2s-write.c.obj
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable i2s-bit-banging-slave.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build/i2s-bit-banging-slave.bin
+[9/10] cmd.exe /C "cd /D C:\Users\ychabchoub\FW\master-slave-working-1\i2s-bit-banging-slave\build\esp-idf\esptool_py && C:\Espressif5.0\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build/partition_table/partition-table.bin C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build/i2s-bit-banging-slave.bin"
+i2s-bit-banging-slave.bin binary size 0x37fe0 bytes. Smallest app partition is 0x100000 bytes. 0xc8020 bytes (78%) free.
+[9/10] cmd.exe /C "cd /D C:\Espressif5.0\Espressif\frameworks\esp-idf-v5.0.4\components\esptool_py && C:\Espressif5.0\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4 -D SERIAL_TOOL=C:/Espressif5.0/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-slave/build -P C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esptool_py/run_serial_tool.cmake"
+esptool esp32s3 -p com18 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 i2s-bit-banging-slave.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port com18
+Connecting...
+Failed to get PID of a device on com18, using standard reset sequence.
+.
+Chip is ESP32-S3 (revision v0.1)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 7c:df:a1:e8:05:7c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00047fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20608 bytes to 13092...
+Writing at 0x00000000... (100 %)
+Wrote 20608 bytes (13092 compressed) at 0x00000000 in 0.7 seconds (effective 236.6 kbit/s)...
+Hash of data verified.
+Compressed 229344 bytes to 119775...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001d2b9... (25 %)
+Writing at 0x0002307d... (37 %)
+Writing at 0x000294aa... (50 %)
+Writing at 0x0002f290... (62 %)
+Writing at 0x000388d8... (75 %)
+Writing at 0x0004003b... (87 %)
+Writing at 0x00045d84... (100 %)
+Wrote 229344 bytes (119775 compressed) at 0x00010000 in 3.5 seconds (effective 519.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 366.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

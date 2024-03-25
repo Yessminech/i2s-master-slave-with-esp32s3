@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "i2s-bit-banging-master",
-    "project_version":    "7ec619e-dirty",
+    "project_version":    "611b872-dirty",
     "project_path":       "C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master",
     "idf_path":           "C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4",
     "build_dir":          "C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/build",

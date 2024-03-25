@@ -13,7 +13,7 @@
 #define I2S_DATA 10
 
 #define NUM_BYTES_PAYLOAD 5
-#define EXAMPLE_SAMPLE_RATE (8000)
+#define EXAMPLE_SAMPLE_RATE (100000)
 
 static const char err_reason[][30] = {"input param is invalid",
                                       "operation timeout"};
