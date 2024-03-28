@@ -1,0 +1,118 @@
+� c�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (25) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 10:01:10[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ae7ch ( 44668) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001aea4 vaddr=3fc91900 size=023a8h (  9128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d254 vaddr=40374000 size=02dc4h ( 11716) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d47ch (119932) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d4a4 vaddr=40376dc4 size=0ab08h ( 43784) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751b8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     i2s-bit-banging-slave[0m
+[0;32mI (198) cpu_start: App version:      51adeda-dirty[0m
+[0;32mI (204) cpu_start: Compile time:     Mar 25 2024 14:08:15[0m
+[0;32mI (210) cpu_start: ELF file SHA256:  4d0faecd34916ca6...[0m
+[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (221) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FC946D8 len 00055038 (340 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (291) app_start: Starting scheduler on CPU0[0m
+[0;32mI (295) app_start: Starting scheduler on CPU1[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+i2s write start
+-----------------------------
+[0;32mI (314) i2s_slave: i2s driver init success[0m
+[0;32mI (318) main_task: Returned from app_main()[0m
+[0;32mI (318) i2s_slave: [WRITE] Write start[0m
+[0;32mI (327) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (344) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (354) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (364) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (374) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (384) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (394) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (404) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (414) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (424) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (434) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (444) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (454) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (464) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (474) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (484) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (494) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (504) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (514) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (524) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (534) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (544) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (554) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (564) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (574) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (584) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (594) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (604) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (614) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (624) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (634) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (644) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (654) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (664) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (674) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (684) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (694) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (704) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (714) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (724) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (734) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (744) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (754) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (764) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (774) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (784) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (794) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (804) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (814) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (824) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (834) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (844) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (854) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (864) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (874) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m
+[0;32mI (884) i2s_slave: [WRITE] i2s write successful, 200 bytes are written.[0m

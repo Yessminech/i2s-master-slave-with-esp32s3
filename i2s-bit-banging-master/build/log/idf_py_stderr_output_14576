@@ -1,0 +1,51 @@
+[0;33m--- idf_monitor on com15 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4037526c: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x42008155: i2s_master_init at C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/main/i2s-read.c:62 (discriminator 1)
+[0m
+[0;33m0x4037a227: _esp_error_check_failed at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_err.c:47
+[0m
+[0;33m0x40375e3e: panic_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/panic.c:424
+[0m
+[0;33m0x4037a231: esp_system_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:153
+[0m
+[0;33m0x403801ea: abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/newlib/abort.c:38
+[0m
+[0;33m0x4037a227: _esp_error_check_failed at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_err.c:47
+[0m
+[0;33m0x42008155: i2s_master_init at C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/main/i2s-read.c:62 (discriminator 1)
+[0m
+[0;33m0x42008165: app_main at C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/main/i2s-read.c:154
+[0m
+[0;33m0x4201cd57: main_task at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4037a241: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0;33m0x403757cd: esp_restart_noos_dig at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:64 (discriminator 1)
+[0m
+[0;33m0x4037526c: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x42008155: i2s_master_init at C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/main/i2s-read.c:62 (discriminator 1)
+[0m
+[0;33m0x4037a227: _esp_error_check_failed at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_err.c:47
+[0m
+[0;33m0x40375e3e: panic_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/panic.c:424
+[0m
+[0;33m0x4037a231: esp_system_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:153
+[0m
+[0;33m0x403801ea: abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/newlib/abort.c:38
+[0m
+[0;33m0x4037a227: _esp_error_check_failed at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_err.c:47
+[0m
+[0;33m0x42008155: i2s_master_init at C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/main/i2s-read.c:62 (discriminator 1)
+[0m
+[0;33m0x42008165: app_main at C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/main/i2s-read.c:154
+[0m
+[0;33m0x4201cd57: main_task at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4037a241: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0;33m0x403757cd: esp_restart_noos_dig at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:64 (discriminator 1)
+[0m
+[0m

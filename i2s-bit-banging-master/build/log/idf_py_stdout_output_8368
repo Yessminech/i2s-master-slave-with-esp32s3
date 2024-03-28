@@ -1,153 +1,57 @@
-ESP-ROM:esp32s3-20210327
-Build:Mar 27 2021
-rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x3fce3810,len:0x168c
-load:0x403c9700,len:0xbf4
-load:0x403cc700,len:0x2da8
-entry 0x403c9904
-[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
-[0;32mI (25) boot: compile time 10:09:29[0m
-[0;32mI (25) boot: Multicore bootloader[0m
-[0;32mI (27) boot: chip revision: v0.1[0m
-[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
-[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
-[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
-[0;32mI (45) boot: Enabling RNG early entropy source...[0m
-[0;32mI (51) boot: Partition Table:[0m
-[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (84) boot: End of partition table[0m
-[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b144h ( 45380) map[0m
-[0;32mI (105) esp_image: segment 1: paddr=0001b16c vaddr=3fc91b00 size=023a8h (  9128) load[0m
-[0;32mI (107) esp_image: segment 2: paddr=0001d51c vaddr=40374000 size=02afch ( 11004) load[0m
-[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d5cch (120268) map[0m
-[0;32mI (144) esp_image: segment 4: paddr=0003d5f4 vaddr=40376afc size=0aff0h ( 45040) load[0m
-[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (160) boot: Disabling RNG early entropy source...[0m
-[0;32mI (171) cpu_start: Multicore app[0m
-[0;32mI (171) cpu_start: Pro cpu up.[0m
-[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (189) cpu_start: Pro cpu start user code[0m
-[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (190) cpu_start: Application information:[0m
-[0;32mI (193) cpu_start: Project name:     i2s-bit-banging-master[0m
-[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
-[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
-[0;32mI (210) cpu_start: ELF file SHA256:  27095999b7d26cb2...[0m
-[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
-[0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
-[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
-[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
-[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
-[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
-[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
-[0;32mI (270) spi_flash: detected chip: generic[0m
-[0;32mI (273) spi_flash: flash io: dio[0m
-[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (291) app_start: Starting scheduler on CPU0[0m
-[0;32mI (295) app_start: Starting scheduler on CPU1[0m
-[0;32mI (295) main_task: Started on CPU0[0m
-[0;32mI (305) main_task: Calling app_main()[0m
-i2s read start
------------------------------
-[0;32mI (314) i2s_master: i2s driver init success[0m
-[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
-[0;32mI (323) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (569) i2s_master: bytesRead4092, bytesToRead2046, cursor0[0m
-[0;32mI (825) i2s_master: bytesRead4092, bytesToRead2046, cursor4092[0m
-[0;32mI (825) i2s_master: Acquisition ok! Setting flag to DONE..[0m
-[0;32mI (827) i2s_master: Task notified end of acquisition successfully.[0m
-[0;32mI (834) i2s_master: 0x00 [0m
-[0;32mI (837) i2s_master: 0x03 [0m
-[0;32mI (840) i2s_master: 0x03 [0m
-[0;32mI (844) i2s_master: 0x03 [0m
-[0;32mI (847) i2s_master: 0x03 [0m
-[0;32mI (850) i2s_master: 0x03 [0m
-[0;32mI (853) i2s_master: 0x03 [0m
-[0;32mI (857) i2s_master: 0x03 [0m
-[0;32mI (860) i2s_master: 0x03 [0m
-[0;32mI (863) i2s_master: 0x03 [0m
-[0;32mI (867) i2s_master: 0x03 [0m
-[0;32mI (870) i2s_master: 0x03 [0m
-[0;32mI (873) i2s_master: 0x03 [0m
-[0;32mI (877) i2s_master: 0x03 [0m
-[0;32mI (880) i2s_master: 0x03 [0m
-[0;32mI (883) i2s_master: 0x03 [0m
-[0;32mI (886) i2s_master: 0x03 [0m
-[0;32mI (890) i2s_master: 0x03 [0m
-[0;32mI (893) i2s_master: 0x03 [0m
-[0;32mI (896) i2s_master: 0x03 [0m
-[0;32mI (900) i2s_master: 0x03 [0m
-[0;32mI (903) i2s_master: 0x00 [0m
-[0;32mI (906) i2s_master: 0x00 [0m
-[0;32mI (909) i2s_master: 0x00 [0m
-[0;32mI (913) i2s_master: 0x00 [0m
-[0;32mI (916) i2s_master: 0x00 [0m
-[0;32mI (919) i2s_master: 0x00 [0m
-[0;32mI (923) i2s_master: 0x00 [0m
-[0;32mI (926) i2s_master: 0x00 [0m
-[0;32mI (929) i2s_master: 0x00 [0m
-[0;32mI (933) i2s_master: 0x00 [0m
-[0;32mI (936) i2s_master: 0x00 [0m
-[0;32mI (939) i2s_master: 0x00 [0m
-[0;32mI (942) i2s_master: 0x00 [0m
-[0;32mI (946) i2s_master: 0x00 [0m
-[0;32mI (949) i2s_master: 0x00 [0m
-[0;32mI (952) i2s_master: 0x00 [0m
-[0;32mI (956) i2s_master: 0x00 [0m
-[0;32mI (959) i2s_master: 0x00 [0m
-[0;32mI (962) i2s_master: 0x00 [0m
-[0;32mI (966) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (1081) i2s_master: bytesRead4092, bytesToRead2046, cursor0[0m
-[0;32mI (1337) i2s_master: bytesRead4092, bytesToRead2046, cursor4092[0m
-[0;32mI (1337) i2s_master: Acquisition ok! Setting flag to DONE..[0m
-[0;32mI (1338) i2s_master: Task notified end of acquisition successfully.[0m
-[0;32mI (1345) i2s_master: 0x01 [0m
-[0;32mI (1349) i2s_master: 0x01 [0m
-[0;32mI (1352) i2s_master: 0x01 [0m
-[0;32mI (1356) i2s_master: 0x01 [0m
-[0;32mI (1359) i2s_master: 0x01 [0m
-[0;32mI (1362) i2s_master: 0x01 [0m
-[0;32mI (1366) i2s_master: 0x01 [0m
-[0;32mI (1369) i2s_master: 0x01 [0m
-[0;32mI (1372) i2s_master: 0x01 [0m
-[0;32mI (1376) i2s_master: 0x01 [0m
-[0;32mI (1379) i2s_master: 0x01 [0m
-[0;32mI (1383) i2s_master: 0x01 [0m
-[0;32mI (1386) i2s_master: 0x01 [0m
-[0;32mI (1389) i2s_master: 0x01 [0m
-[0;32mI (1393) i2s_master: 0x01 [0m
-[0;32mI (1396) i2s_master: 0x01 [0m
-[0;32mI (1400) i2s_master: 0x01 [0m
-[0;32mI (1403) i2s_master: 0x01 [0m
-[0;32mI (1406) i2s_master: 0x01 [0m
-[0;32mI (1410) i2s_master: 0x01 [0m
-[0;32mI (1413) i2s_master: 0x01 [0m
-[0;32mI (1416) i2s_master: 0x00 [0m
-[0;32mI (1420) i2s_master: 0x00 [0m
-[0;32mI (1423) i2s_master: 0x00 [0m
-[0;32mI (1427) i2s_master: 0x00 [0m
-[0;32mI (1430) i2s_master: 0x00 [0m
-[0;32mI (1433) i2s_master: 0x00 [0m
-[0;32mI (1437) i2s_master: 0x00 [0m
-[0;32mI (1440) i2s_master: 0x00 [0m
-[0;32mI (1444) i2s_master: 0x00 [0m
-[0;32mI (1447) i2s_master: 0x00 [0m
-[0;32mI (1450) i2s_master: 0x00 [0m
-[0;32mI (1454) i2s_master: 0x00 [0m
-[0;32mI (1457) i2s_master: 0x00 [0m
-[0;32mI (1460) i2s_master: 0x00 [0m
-[0;32mI (1464) i2s_master: 0x00 [0m
-[0;32mI (1467) i2s_master: 0x00 [0m
-[0;32mI (1471) i2s_master: 0x00 [0m
-[0;32mI (1474) i2s_master: 0x00 [0m
-[0;32mI (1477) i2s_master: 0x00 [0m
-[0;32mI (1481) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (1592) i2s_master: bytesRead4092, bytesToRead2046, cursor0[0m
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\ychabchoub\FW\master-slave-working-1\i2s-bit-banging-master\build\bootloader\esp-idf\esptool_py && C:\Espressif5.0\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5080 bytes. 0x2f80 bytes (37%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/i2s-read.c.obj
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable i2s-bit-banging-master.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/build/i2s-bit-banging-master.bin
+[7/8] cmd.exe /C "cd /D C:\Users\ychabchoub\FW\master-slave-working-1\i2s-bit-banging-master\build\esp-idf\esptool_py && C:\Espressif5.0\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/build/partition_table/partition-table.bin C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/build/i2s-bit-banging-master.bin"
+i2s-bit-banging-master.bin binary size 0x39000 bytes. Smallest app partition is 0x100000 bytes. 0xc7000 bytes (78%) free.
+[7/8] cmd.exe /C "cd /D C:\Espressif5.0\Espressif\frameworks\esp-idf-v5.0.4\components\esptool_py && C:\Espressif5.0\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4 -D SERIAL_TOOL=C:/Espressif5.0/Espressif/python_env/idf5.0_py3.11_env/Scripts/python.exe;;C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/ychabchoub/FW/master-slave-working-1/i2s-bit-banging-master/build -P C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esptool_py/run_serial_tool.cmake"
+esptool esp32s3 -p com15 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 i2s-bit-banging-master.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port com15
+Connecting...
+Failed to get PID of a device on com15, using standard reset sequence.
+.
+Chip is ESP32-S3 (revision v0.1)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 7c:df:a1:e8:6d:14
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00048fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20608 bytes to 13095...
+Writing at 0x00000000... (100 %)
+Wrote 20608 bytes (13095 compressed) at 0x00000000 in 0.8 seconds (effective 203.4 kbit/s)...
+Hash of data verified.
+Compressed 233472 bytes to 122230...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001d384... (25 %)
+Writing at 0x00023165... (37 %)
+Writing at 0x000295f1... (50 %)
+Writing at 0x0002f3ed... (62 %)
+Writing at 0x00038a0b... (75 %)
+Writing at 0x0004023d... (87 %)
+Writing at 0x00046196... (100 %)
+Wrote 233472 bytes (122230 compressed) at 0x00010000 in 3.8 seconds (effective 492.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 293.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

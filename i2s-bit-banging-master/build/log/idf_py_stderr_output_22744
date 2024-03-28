@@ -1,0 +1,45 @@
+[0;33m--- idf_monitor on com15 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403751c4: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x4037a177: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:153
+[0m
+[0;33m0x40375d96: panic_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/panic.c:424
+[0m
+[0;33m0x4037a149: esp_system_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:153
+[0m
+[0;33m0x4037f68a: abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/newlib/abort.c:38
+[0m
+[0;33m0x4037a177: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:153
+[0m
+[0;33m0x40378d12: esp_cpu_wait_for_intr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/cpu.c:110
+[0m
+[0;33m0x403751c4: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x4037a177: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:153
+[0m
+[0;33m0x40375d96: panic_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/panic.c:424
+[0m
+[0;33m0x4037a149: esp_system_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:153
+[0m
+[0;33m0x4037f68a: abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/newlib/abort.c:38
+[0m
+[0;33m0x4037a177: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:153
+[0m
+[0;33m0x40378d12: esp_cpu_wait_for_intr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/cpu.c:110
+[0m
+[0;33m0x403751c4: call_start_cpu1 at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/port/cpu_start.c:143
+[0m
+[0;33m0x4037a177: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:153
+[0m
+[0;33m0x40375d96: panic_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/panic.c:424
+[0m
+[0;33m0x4037a149: esp_system_abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_system/esp_system.c:153
+[0m
+[0;33m0x4037f68a: abort at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/newlib/abort.c:38
+[0m
+[0;33m0x4037a177: vPortTaskWrapper at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:153
+[0m
+[0;33m0x40378d12: esp_cpu_wait_for_intr at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4/components/esp_hw_support/cpu.c:110
+[0m
+[0m
