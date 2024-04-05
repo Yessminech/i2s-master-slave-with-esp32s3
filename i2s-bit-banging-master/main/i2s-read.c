@@ -11,10 +11,9 @@
 #define I2S_MASTER_WS 21
 #define I2S_MASTER_CLK 47
 #define I2S_DATA 48
-#define DMABufferLength (2046)
+#define DMABufferLength (1023)
 #define EXAMPLE_SAMPLE_RATE (10000) // Max 15000
 
-// static const char err_reason[][30] = {"input param is invalid", "operation timeout"};
 static const char *TAG = "i2s_master";
 static i2s_chan_handle_t rx_handle = NULL;
 
@@ -24,7 +23,6 @@ typedef enum
     READING = 2,
     DONE = 4,
     ERROR = 8
-    // todo: Add overflow Tag
 } ReadStatus;
 
 typedef struct
@@ -32,14 +30,14 @@ typedef struct
     int16_t *buffer;
     size_t totalSize;
     EventGroupHandle_t flags;
-    size_t *cursor;
+    uint16_t *cursor;
 } Sample;
 
 static esp_err_t i2s_master_init(void)
 {
     i2s_chan_config_t chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_AUTO, I2S_ROLE_MASTER);
-    chan_cfg.auto_clear = true;
-    chan_cfg.dma_desc_num = 8; // todo check if this is enough
+    // chan_cfg.auto_clear = true; //todo
+    chan_cfg.dma_desc_num = 10;
     chan_cfg.dma_frame_num = DMABufferLength;
     ESP_ERROR_CHECK(i2s_new_channel(&chan_cfg, NULL, &rx_handle));
     i2s_std_config_t std_cfg = {
@@ -68,32 +66,25 @@ IRAM_ATTR bool i2s_rx_recv(i2s_chan_handle_t rx_handle,
                            i2s_event_data_t *event,
                            void *arg)
 {
-    BaseType_t xHigherPriorityTaskWoken = pdFALSE; // xHigherPriorityTaskWoken must be initialised to pdFALSE.
-    // SAMPLE CONFIGURATION
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE; // xHigherPriorityTaskWoken must be initialized to pdFALSE.
     Sample *mySample = (Sample *)arg;
-
-    // DMA_RECV
-    int16_t *buffer = (int16_t *)(event->data);
-    size_t dmaBufferSize = event->size / 2;
+    uint16_t *buffer = (uint16_t *)(event->data);
+    uint16_t dmaBufferSize = (uint16_t)event->size;
 
     // Fill Sample
-    while (*mySample->cursor < mySample->totalSize)
+    size_t samplesToRead = (mySample->totalSize - *mySample->cursor > dmaBufferSize) ? dmaBufferSize : mySample->totalSize - *mySample->cursor; // 1 Sample = 2 Bytes
+    for (uint16_t i = 0; i < samplesToRead; i++)
     {
-        size_t read_length = (mySample->totalSize - *mySample->cursor > dmaBufferSize)
-                                 ? dmaBufferSize
-                                 : mySample->totalSize - *mySample->cursor;
-        for (uint16_t i = 0; i < read_length; i++)
-        {
-            mySample->buffer[*mySample->cursor] = buffer[i];
-            (*mySample->cursor)++; // todo global var?
-        }
+        mySample->buffer[*mySample->cursor + i] = buffer[i];
     }
-
-    //  0x0063
-    //  0x0000
-
-    // Done, Send
-    xEventGroupSetBitsFromISR(mySample->flags, DONE, &xHigherPriorityTaskWoken);
+    *mySample->cursor += samplesToRead;
+    uint32_t flag = READING;
+    if (*mySample->cursor == mySample->totalSize)
+    {
+        // Done, Send
+        flag = DONE;
+    }
+    xEventGroupSetBitsFromISR(mySample->flags, flag, &xHigherPriorityTaskWoken);
     return true;
 }
 
@@ -106,6 +97,7 @@ IRAM_ATTR bool i2s_rx_recv_ovf(i2s_chan_handle_t rx_handle,
     xEventGroupSetBitsFromISR(mySample->flags, ERROR, &xHigherPriorityTaskWoken);
     return false;
 }
+
 void acquisitionTask(void *arg)
 {
 
@@ -116,7 +108,7 @@ void acquisitionTask(void *arg)
         .on_sent = NULL,
         .on_send_q_ovf = NULL,
     };
-    esp_err_t ret = i2s_channel_register_event_callback(rx_handle, &cbs, arg); // todo arg or *arg ??
+    esp_err_t ret = i2s_channel_register_event_callback(rx_handle, &cbs, arg);
     if (ret != ESP_OK)
     {
         ESP_LOGE(TAG, "Callbacks registration failed!");
@@ -128,35 +120,57 @@ void acquisitionTask(void *arg)
         vTaskDelay(portMAX_DELAY);
     }
 
-    ESP_LOGI(TAG, "Collecting %" PRId16 " samples...", EXAMPLE_SAMPLE_RATE);
     Sample *mySample = (Sample *)arg;
+    xEventGroupSetBits(mySample->flags, START);
+
     for (;;)
     {
-        // Wait for i2s_rx_recv to fire acquisition event
-        const TickType_t acquisition_timeout = 100 / portTICK_PERIOD_MS;                                              // todo check this , (1.1) * 1000 ;
-        EventBits_t bits = xEventGroupWaitBits(mySample->flags, DONE | ERROR, pdFALSE, pdFALSE, acquisition_timeout); // todo Check this timeout
-
-        // if (!bits)
-        // {
-        //     ESP_LOGW(TAG, "Timeout collecting data.");
-        // }
-        // else
-        // {
-        if ((bits & DONE))
+        if ((xEventGroupGetBits(mySample->flags)) && START)
         {
-            ESP_LOGI(TAG, "Task notified end of acquisition successfully.");
-            for (size_t i = 0; i < 100; i++)
-            {
-                uint16_t value = ((uint16_t)mySample->buffer[i]);
-                ESP_LOGI(TAG, "Sample %zu: 0x%04X", i, value);
-            }
-            xEventGroupClearBits(mySample->flags, DONE);
+            ESP_LOGW(TAG, "Collecting %" PRId16 " samples...", EXAMPLE_SAMPLE_RATE);
+            xEventGroupClearBits(mySample->flags, START);
         }
-        else if (bits & ERROR)
+
+        // Wait for i2s_rx_recv to fire acquisition event
+        const TickType_t acquisition_timeout = (1.1) * 1000;
+        EventBits_t bits = xEventGroupWaitBits(mySample->flags, READING | DONE | ERROR, pdFALSE, pdFALSE, acquisition_timeout); // todo Check this timeout
+        // todo check if timeout is triggered
+        EventBits_t status = xEventGroupGetBits(mySample->flags);
+        // if (bits)
+        //{
+        if (bits & ERROR)
         {
             ESP_LOGE(TAG, "[READ] Error reading Data: Read overflow");
             xEventGroupClearBits(mySample->flags, ERROR);
         }
+        else if ((bits & READING))
+        {
+            ESP_LOGW(TAG, " %" PRId16 " samples collected, READING...", *mySample->cursor);
+            xEventGroupClearBits(mySample->flags, READING);
+        }
+        else if ((bits & DONE))
+        {
+            ESP_LOGI(TAG, "Task notified end of acquisition successfully %" PRId16 " samples collected. ", *mySample->cursor);
+            *mySample->cursor = 0;
+            for (size_t i = 0; i < 150; i++)
+            {
+                uint16_t value = ((uint16_t)mySample->buffer[i]);
+                ESP_LOGI(TAG, "Sample %zu: 0x%04X", i, value);
+            }
+            // RESET
+            memset(mySample->buffer, 0, 3 * EXAMPLE_SAMPLE_RATE);
+            // EventBits_t uxBits;
+            xEventGroupClearBits(mySample->flags, DONE | READING); // todo: Why is this not working
+            // if( ( uxBits & ( DONE | READING ) ) == ( DONE | READING ) )  { }
+            *mySample->cursor = 0;
+            xEventGroupSetBits(mySample->flags, START);
+        }
+
+        // else
+        // {
+        //     ESP_LOGW(TAG, "Timeout collecting data.");
+        // }
+        xEventGroupClearBits(mySample->flags, READING | DONE | ERROR);
     }
 }
 
@@ -174,9 +188,9 @@ void app_main(void)
         ESP_LOGI(TAG, "i2s driver init success");
     }
 
-    size_t cursor = 0;
-    int16_t *samples = malloc(2 * EXAMPLE_SAMPLE_RATE);
-    memset(samples, 0, EXAMPLE_SAMPLE_RATE);
+    uint16_t cursor = 0;
+    int16_t *samples = malloc(3 * EXAMPLE_SAMPLE_RATE); // 2 or 3
+    memset(samples, 0, 3 * EXAMPLE_SAMPLE_RATE);
     Sample mySample = {
         .buffer = samples,
         .totalSize = EXAMPLE_SAMPLE_RATE,
@@ -184,27 +198,10 @@ void app_main(void)
         .cursor = &cursor,
     };
 
-    xTaskCreate(acquisitionTask, "AcquisitionTask", configMINIMAL_STACK_SIZE * 80, &mySample, 5, NULL);
+    xTaskCreate(acquisitionTask, "AcquisitionTask", configMINIMAL_STACK_SIZE * 100, &mySample, 5, NULL);
 
     for (;;)
     {
         vTaskDelay(portMAX_DELAY);
     }
 }
-
-//*mySample->cursor = 0;
-// while (*mySample->cursor < mySample->totalSize)
-// {
-//     size_t samplesToRead = (mySample->totalSize - *mySample->cursor > DMABufferLength) ? DMABufferLength : mySample->totalSize - *mySample->cursor;
-//     size_t bytesRead = 0;
-//     esp_err_t ret = i2s_channel_read(rx_handle, mySample->buffer + *mySample->cursor, 2 * samplesToRead, &bytesRead, 1000); // 1 Sample = 2 Bytes
-
-//     if (ret != ESP_OK || bytesRead != samplesToRead * 2)
-//     {
-//         ESP_LOGE(TAG, "[READ] i2s read failed, %s", err_reason[ret == ESP_ERR_TIMEOUT]);
-//         xEventGroupSetBitsFromISR(mySample->flags, ERROR, &xHigherPriorityTaskWoken);
-//         return false;
-//     }
-
-//     *mySample->cursor += samplesToRead;
-// }

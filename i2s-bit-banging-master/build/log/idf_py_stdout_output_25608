@@ -1,4 +1,4 @@
-95) ma�ESP-ROM:esp32s3-20210327
+me:   �ESP-ROM:esp32s3-20210327
 Build:Mar 27 2021
 rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
 SPIWP:0xee
@@ -21,85 +21,332 @@ entry 0x403c9904
 [0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
 [0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
 [0;32mI (84) boot: End of partition table[0m
-[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b144h ( 45380) map[0m
-[0;32mI (105) esp_image: segment 1: paddr=0001b16c vaddr=3fc91b00 size=023a8h (  9128) load[0m
-[0;32mI (107) esp_image: segment 2: paddr=0001d51c vaddr=40374000 size=02afch ( 11004) load[0m
-[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d5c8h (120264) map[0m
-[0;32mI (144) esp_image: segment 4: paddr=0003d5f0 vaddr=40376afc size=0aff0h ( 45040) load[0m
-[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b1ach ( 45484) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b1d4 vaddr=3fc92400 size=023b8h (  9144) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001d594 vaddr=40374000 size=02a84h ( 10884) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1d514h (120084) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003d53c vaddr=40376a84 size=0b8c8h ( 47304) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
 [0;32mI (160) boot: Disabling RNG early entropy source...[0m
-[0;32mI (171) cpu_start: Multicore app[0m
-[0;32mI (171) cpu_start: Pro cpu up.[0m
-[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403751e8[0m
+[0;32mI (172) cpu_start: Multicore app[0m
+[0;32mI (172) cpu_start: Pro cpu up.[0m
+[0;32mI (172) cpu_start: Starting app cpu, entry point is 0x4037526c[0m
 [0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
 [0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
 [0;32mI (190) cpu_start: Application information:[0m
 [0;32mI (193) cpu_start: Project name:     i2s-bit-banging-master[0m
-[0;32mI (199) cpu_start: App version:      7ec619e-dirty[0m
-[0;32mI (204) cpu_start: Compile time:     Mar 11 2024 12:01:49[0m
-[0;32mI (210) cpu_start: ELF file SHA256:  5af6bed5bb34f052...[0m
-[0;32mI (216) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (199) cpu_start: App version:      8b1875b-dirty[0m
+[0;32mI (205) cpu_start: Compile time:     Mar 28 2024 13:32:39[0m
+[0;32mI (211) cpu_start: ELF file SHA256:  bb8be1deb2acaafb...[0m
+[0;32mI (217) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
 [0;32mI (222) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
-[0;32mI (231) cpu_start: Chip rev:         v0.1[0m
-[0;32mI (236) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (243) heap_init: At 3FC948D8 len 00054E38 (339 KiB): DRAM[0m
-[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
-[0;32mI (256) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
-[0;32mI (262) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (227) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (232) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (237) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FC95318 len 000543F8 (336 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (257) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (263) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
 [0;32mI (270) spi_flash: detected chip: generic[0m
-[0;32mI (273) spi_flash: flash io: dio[0m
-[0;33mW (277) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (291) app_start: Starting scheduler on CPU0[0m
-[0;32mI (295) app_start: Starting scheduler on CPU1[0m
-[0;32mI (295) main_task: Started on CPU0[0m
-[0;32mI (305) main_task: Calling app_main()[0m
+[0;32mI (274) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (292) app_start: Starting scheduler on CPU0[0m
+[0;32mI (296) app_start: Starting scheduler on CPU1[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
 i2s read start
 -----------------------------
-[0;32mI (314) i2s_master: i2s driver init success[0m
-[0;32mI (318) i2s_master: Collecting 8000 samples...[0m
-[0;32mI (323) i2s_master: Task notified start of acquisition ..[0m
-[0;31mE (429) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (429) i2s_master: [READ] Error reading Data[0m
-[0;32mI (429) i2s_master: Task notified start of acquisition ..[0m
-[0;31mE (535) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (535) i2s_master: [READ] Error reading Data[0m
-[0;32mI (535) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (570) i2s_master: bytesRead2046, bytesToRead2046, cursor2046[0m
-[0;32mI (570) i2s_master: bytesRead2046, bytesToRead2046, cursor4092[0m
-[0;31mE (672) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (672) i2s_master: [READ] Error reading Data[0m
-[0;32mI (672) i2s_master: Task notified start of acquisition ..[0m
-[0;31mE (778) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (778) i2s_master: [READ] Error reading Data[0m
-[0;32mI (778) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (826) i2s_master: bytesRead2046, bytesToRead2046, cursor2046[0m
-[0;32mI (826) i2s_master: bytesRead2046, bytesToRead2046, cursor4092[0m
-[0;31mE (928) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (928) i2s_master: [READ] Error reading Data[0m
-[0;32mI (928) i2s_master: Task notified start of acquisition ..[0m
-[0;31mE (1034) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (1034) i2s_master: [READ] Error reading Data[0m
-[0;32mI (1034) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (1081) i2s_master: bytesRead2046, bytesToRead2046, cursor2046[0m
-[0;32mI (1082) i2s_master: bytesRead2046, bytesToRead2046, cursor4092[0m
-[0;31mE (1184) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (1184) i2s_master: [READ] Error reading Data[0m
-[0;32mI (1184) i2s_master: Task notified start of acquisition ..[0m
-[0;31mE (1290) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (1290) i2s_master: [READ] Error reading Data[0m
-[0;32mI (1290) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (1337) i2s_master: bytesRead2046, bytesToRead2046, cursor2046[0m
-[0;32mI (1337) i2s_master: bytesRead2046, bytesToRead2046, cursor4092[0m
-[0;31mE (1439) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (1439) i2s_master: [READ] Error reading Data[0m
-[0;32mI (1439) i2s_master: Task notified start of acquisition ..[0m
-[0;31mE (1545) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (1545) i2s_master: [READ] Error reading Data[0m
-[0;32mI (1545) i2s_master: Task notified start of acquisition ..[0m
-[0;32mI (1593) i2s_master: bytesRead2046, bytesToRead2046, cursor2046[0m
-[0;32mI (1593) i2s_master: bytesRead2046, bytesToRead2046, cursor4092[0m
-[0;31mE (1695) i2s_master: [READ] i2s read failed, operation timeout[0m
-[0;31mE (1695) i2s_master: [READ] Error reading Data[0m
-[0;32mI (1695) i2s_master: Task notified start of acquisition ..[0m
+[0;32mI (315) i2s_master: i2s driver init success[0m
+[0;32mI (319) i2s_master: Collecting 10000 samples...[0m
+[0;33mW (424) i2s_master:  2046 samples collected, READING...[0m
+[0;33mW (624) i2s_master:  4092 samples collected, READING...[0m
+[0;33mW (724) i2s_master:  6138 samples collected, READING...[0m
+[0;33mW (824) i2s_master:  8184 samples collected, READING...[0m
+[0;32mI (831) i2s_master: Task notified end of acquisition successfully 10000 samples collected. [0m
+[0;32mI (831) i2s_master: Sample 0: 0xAD7C[0m
+[0;32mI (833) i2s_master: Sample 1: 0xB580[0m
+[0;32mI (837) i2s_master: Sample 2: 0x0800[0m
+[0;32mI (841) i2s_master: Sample 3: 0x0031[0m
+[0;32mI (846) i2s_master: Sample 4: 0x0033[0m
+[0;32mI (850) i2s_master: Sample 5: 0x0035[0m
+[0;32mI (854) i2s_master: Sample 6: 0x0037[0m
+[0;32mI (858) i2s_master: Sample 7: 0x0039[0m
+[0;32mI (863) i2s_master: Sample 8: 0x003B[0m
+[0;32mI (867) i2s_master: Sample 9: 0x003D[0m
+[0;32mI (871) i2s_master: Sample 10: 0x003F[0m
+[0;32mI (876) i2s_master: Sample 11: 0x0041[0m
+[0;32mI (880) i2s_master: Sample 12: 0x0043[0m
+[0;32mI (884) i2s_master: Sample 13: 0x0045[0m
+[0;32mI (889) i2s_master: Sample 14: 0x0047[0m
+[0;32mI (893) i2s_master: Sample 15: 0x0049[0m
+[0;32mI (897) i2s_master: Sample 16: 0x004B[0m
+[0;32mI (902) i2s_master: Sample 17: 0x004D[0m
+[0;32mI (906) i2s_master: Sample 18: 0x004F[0m
+[0;32mI (910) i2s_master: Sample 19: 0x0051[0m
+[0;32mI (915) i2s_master: Sample 20: 0x0053[0m
+[0;32mI (919) i2s_master: Sample 21: 0x0055[0m
+[0;32mI (923) i2s_master: Sample 22: 0x0057[0m
+[0;32mI (928) i2s_master: Sample 23: 0x0059[0m
+[0;32mI (932) i2s_master: Sample 24: 0x005B[0m
+[0;32mI (936) i2s_master: Sample 25: 0x005D[0m
+[0;32mI (941) i2s_master: Sample 26: 0x005F[0m
+[0;32mI (945) i2s_master: Sample 27: 0x0061[0m
+[0;32mI (949) i2s_master: Sample 28: 0x0063[0m
+[0;32mI (954) i2s_master: Sample 29: 0x0001[0m
+[0;32mI (958) i2s_master: Sample 30: 0x0003[0m
+[0;32mI (962) i2s_master: Sample 31: 0x0005[0m
+[0;32mI (967) i2s_master: Sample 32: 0x0007[0m
+[0;32mI (971) i2s_master: Sample 33: 0x0009[0m
+[0;32mI (975) i2s_master: Sample 34: 0x000B[0m
+[0;32mI (980) i2s_master: Sample 35: 0x000D[0m
+[0;32mI (984) i2s_master: Sample 36: 0x000F[0m
+[0;32mI (988) i2s_master: Sample 37: 0x0011[0m
+[0;32mI (993) i2s_master: Sample 38: 0x0013[0m
+[0;32mI (997) i2s_master: Sample 39: 0x0015[0m
+[0;32mI (1001) i2s_master: Sample 40: 0x0017[0m
+[0;32mI (1006) i2s_master: Sample 41: 0x0019[0m
+[0;32mI (1010) i2s_master: Sample 42: 0x001B[0m
+[0;32mI (1015) i2s_master: Sample 43: 0x001D[0m
+[0;32mI (1019) i2s_master: Sample 44: 0x001F[0m
+[0;32mI (1024) i2s_master: Sample 45: 0x0021[0m
+[0;32mI (1028) i2s_master: Sample 46: 0x0023[0m
+[0;32mI (1032) i2s_master: Sample 47: 0x0025[0m
+[0;32mI (1037) i2s_master: Sample 48: 0x0027[0m
+[0;32mI (1041) i2s_master: Sample 49: 0x0029[0m
+[0;32mI (1046) i2s_master: Sample 50: 0x002B[0m
+[0;32mI (1050) i2s_master: Sample 51: 0x002D[0m
+[0;32mI (1055) i2s_master: Sample 52: 0x002F[0m
+[0;32mI (1059) i2s_master: Sample 53: 0x0031[0m
+[0;32mI (1063) i2s_master: Sample 54: 0x0033[0m
+[0;32mI (1068) i2s_master: Sample 55: 0x0035[0m
+[0;32mI (1072) i2s_master: Sample 56: 0x0037[0m
+[0;32mI (1077) i2s_master: Sample 57: 0x0039[0m
+[0;32mI (1081) i2s_master: Sample 58: 0x003B[0m
+[0;32mI (1086) i2s_master: Sample 59: 0x003D[0m
+[0;32mI (1090) i2s_master: Sample 60: 0x003F[0m
+[0;32mI (1094) i2s_master: Sample 61: 0x0041[0m
+[0;32mI (1099) i2s_master: Sample 62: 0x0043[0m
+[0;32mI (1103) i2s_master: Sample 63: 0x0045[0m
+[0;32mI (1108) i2s_master: Sample 64: 0x0047[0m
+[0;32mI (1112) i2s_master: Sample 65: 0x0049[0m
+[0;32mI (1117) i2s_master: Sample 66: 0x004B[0m
+[0;32mI (1121) i2s_master: Sample 67: 0x004D[0m
+[0;32mI (1125) i2s_master: Sample 68: 0x004F[0m
+[0;32mI (1130) i2s_master: Sample 69: 0x0051[0m
+[0;32mI (1134) i2s_master: Sample 70: 0x0053[0m
+[0;32mI (1139) i2s_master: Sample 71: 0x0055[0m
+[0;32mI (1143) i2s_master: Sample 72: 0x0057[0m
+[0;32mI (1147) i2s_master: Sample 73: 0x0059[0m
+[0;32mI (1152) i2s_master: Sample 74: 0x005B[0m
+[0;32mI (1156) i2s_master: Sample 75: 0x005D[0m
+[0;32mI (1161) i2s_master: Sample 76: 0x005F[0m
+[0;32mI (1165) i2s_master: Sample 77: 0x0061[0m
+[0;32mI (1170) i2s_master: Sample 78: 0x0063[0m
+[0;32mI (1174) i2s_master: Sample 79: 0x0001[0m
+[0;32mI (1178) i2s_master: Sample 80: 0x0003[0m
+[0;32mI (1183) i2s_master: Sample 81: 0x0005[0m
+[0;32mI (1187) i2s_master: Sample 82: 0x0007[0m
+[0;32mI (1192) i2s_master: Sample 83: 0x0009[0m
+[0;32mI (1196) i2s_master: Sample 84: 0x000B[0m
+[0;32mI (1201) i2s_master: Sample 85: 0x000D[0m
+[0;32mI (1205) i2s_master: Sample 86: 0x000F[0m
+[0;32mI (1209) i2s_master: Sample 87: 0x0011[0m
+[0;32mI (1214) i2s_master: Sample 88: 0x0013[0m
+[0;32mI (1218) i2s_master: Sample 89: 0x0015[0m
+[0;32mI (1223) i2s_master: Sample 90: 0x0017[0m
+[0;32mI (1227) i2s_master: Sample 91: 0x0019[0m
+[0;32mI (1232) i2s_master: Sample 92: 0x001B[0m
+[0;32mI (1236) i2s_master: Sample 93: 0x001D[0m
+[0;32mI (1240) i2s_master: Sample 94: 0x001F[0m
+[0;32mI (1245) i2s_master: Sample 95: 0x0021[0m
+[0;32mI (1249) i2s_master: Sample 96: 0x0023[0m
+[0;32mI (1254) i2s_master: Sample 97: 0x0025[0m
+[0;32mI (1258) i2s_master: Sample 98: 0x0027[0m
+[0;32mI (1263) i2s_master: Sample 99: 0x0029[0m
+[0;32mI (1267) i2s_master: Task notified end of acquisition successfully 0 samples collected. [0m
+[0;32mI (1276) i2s_master: Sample 0: 0xAD7C[0m
+[0;32mI (1280) i2s_master: Sample 1: 0xB580[0m
+[0;32mI (1284) i2s_master: Sample 2: 0x0800[0m
+[0;32mI (1289) i2s_master: Sample 3: 0x0031[0m
+[0;32mI (1293) i2s_master: Sample 4: 0x0033[0m
+[0;32mI (1297) i2s_master: Sample 5: 0x0035[0m
+[0;32mI (1302) i2s_master: Sample 6: 0x0037[0m
+[0;32mI (1306) i2s_master: Sample 7: 0x0039[0m
+[0;32mI (1310) i2s_master: Sample 8: 0x003B[0m
+[0;32mI (1315) i2s_master: Sample 9: 0x003D[0m
+[0;32mI (1319) i2s_master: Sample 10: 0x003F[0m
+[0;32mI (1324) i2s_master: Sample 11: 0x0041[0m
+[0;32mI (1328) i2s_master: Sample 12: 0x0043[0m
+[0;32mI (1332) i2s_master: Sample 13: 0x0045[0m
+[0;32mI (1337) i2s_master: Sample 14: 0x0047[0m
+[0;32mI (1341) i2s_master: Sample 15: 0x0049[0m
+[0;32mI (1346) i2s_master: Sample 16: 0x0052[0m
+[0;32mI (1350) i2s_master: Sample 17: 0x0054[0m
+[0;32mI (1355) i2s_master: Sample 18: 0x0056[0m
+[0;32mI (1359) i2s_master: Sample 19: 0x0058[0m
+[0;32mI (1363) i2s_master: Sample 20: 0x005A[0m
+[0;32mI (1368) i2s_master: Sample 21: 0x005C[0m
+[0;32mI (1372) i2s_master: Sample 22: 0x005E[0m
+[0;32mI (1377) i2s_master: Sample 23: 0x0060[0m
+[0;32mI (1381) i2s_master: Sample 24: 0x0062[0m
+[0;32mI (1386) i2s_master: Sample 25: 0x0000[0m
+[0;32mI (1390) i2s_master: Sample 26: 0x0002[0m
+[0;32mI (1394) i2s_master: Sample 27: 0x0004[0m
+[0;32mI (1399) i2s_master: Sample 28: 0x0006[0m
+[0;32mI (1403) i2s_master: Sample 29: 0x0008[0m
+[0;32mI (1408) i2s_master: Sample 30: 0x000A[0m
+[0;32mI (1412) i2s_master: Sample 31: 0x000C[0m
+[0;32mI (1417) i2s_master: Sample 32: 0x000E[0m
+[0;32mI (1421) i2s_master: Sample 33: 0x0010[0m
+[0;32mI (1425) i2s_master: Sample 34: 0x0012[0m
+[0;32mI (1430) i2s_master: Sample 35: 0x0014[0m
+[0;32mI (1434) i2s_master: Sample 36: 0x0016[0m
+[0;32mI (1439) i2s_master: Sample 37: 0x0018[0m
+[0;32mI (1443) i2s_master: Sample 38: 0x001A[0m
+[0;32mI (1448) i2s_master: Sample 39: 0x001C[0m
+[0;32mI (1452) i2s_master: Sample 40: 0x001E[0m
+[0;32mI (1456) i2s_master: Sample 41: 0x0020[0m
+[0;32mI (1461) i2s_master: Sample 42: 0x0022[0m
+[0;32mI (1465) i2s_master: Sample 43: 0x0024[0m
+[0;32mI (1470) i2s_master: Sample 44: 0x0026[0m
+[0;32mI (1474) i2s_master: Sample 45: 0x0028[0m
+[0;32mI (1479) i2s_master: Sample 46: 0x002A[0m
+[0;32mI (1483) i2s_master: Sample 47: 0x002C[0m
+[0;32mI (1487) i2s_master: Sample 48: 0x002E[0m
+[0;32mI (1492) i2s_master: Sample 49: 0x0030[0m
+[0;32mI (1496) i2s_master: Sample 50: 0x0032[0m
+[0;32mI (1501) i2s_master: Sample 51: 0x0034[0m
+[0;32mI (1505) i2s_master: Sample 52: 0x0036[0m
+[0;32mI (1510) i2s_master: Sample 53: 0x0038[0m
+[0;32mI (1514) i2s_master: Sample 54: 0x003A[0m
+[0;32mI (1518) i2s_master: Sample 55: 0x003C[0m
+[0;32mI (1523) i2s_master: Sample 56: 0x003E[0m
+[0;32mI (1527) i2s_master: Sample 57: 0x0040[0m
+[0;32mI (1532) i2s_master: Sample 58: 0x0042[0m
+[0;32mI (1536) i2s_master: Sample 59: 0x0044[0m
+[0;32mI (1541) i2s_master: Sample 60: 0x0046[0m
+[0;32mI (1545) i2s_master: Sample 61: 0x0048[0m
+[0;32mI (1549) i2s_master: Sample 62: 0x004A[0m
+[0;32mI (1554) i2s_master: Sample 63: 0x004C[0m
+[0;32mI (1558) i2s_master: Sample 64: 0x004E[0m
+[0;32mI (1563) i2s_master: Sample 65: 0x0050[0m
+[0;32mI (1567) i2s_master: Sample 66: 0x0052[0m
+[0;32mI (1571) i2s_master: Sample 67: 0x0054[0m
+[0;32mI (1576) i2s_master: Sample 68: 0x0056[0m
+[0;32mI (1580) i2s_master: Sample 69: 0x0058[0m
+[0;32mI (1585) i2s_master: Sample 70: 0x005A[0m
+[0;32mI (1589) i2s_master: Sample 71: 0x005C[0m
+[0;32mI (1594) i2s_master: Sample 72: 0x005E[0m
+[0;32mI (1598) i2s_master: Sample 73: 0x0060[0m
+[0;32mI (1602) i2s_master: Sample 74: 0x0062[0m
+[0;32mI (1607) i2s_master: Sample 75: 0x0000[0m
+[0;32mI (1611) i2s_master: Sample 76: 0x0002[0m
+[0;32mI (1616) i2s_master: Sample 77: 0x0004[0m
+[0;32mI (1620) i2s_master: Sample 78: 0x0006[0m
+[0;32mI (1625) i2s_master: Sample 79: 0x0008[0m
+[0;32mI (1629) i2s_master: Sample 80: 0x000A[0m
+[0;32mI (1633) i2s_master: Sample 81: 0x000C[0m
+[0;32mI (1638) i2s_master: Sample 82: 0x000E[0m
+[0;32mI (1642) i2s_master: Sample 83: 0x0010[0m
+[0;32mI (1647) i2s_master: Sample 84: 0x0012[0m
+[0;32mI (1651) i2s_master: Sample 85: 0x0014[0m
+[0;32mI (1656) i2s_master: Sample 86: 0x0016[0m
+[0;32mI (1660) i2s_master: Sample 87: 0x0018[0m
+[0;32mI (1664) i2s_master: Sample 88: 0x001A[0m
+[0;32mI (1669) i2s_master: Sample 89: 0x001C[0m
+[0;32mI (1673) i2s_master: Sample 90: 0x001E[0m
+[0;32mI (1678) i2s_master: Sample 91: 0x0020[0m
+[0;32mI (1682) i2s_master: Sample 92: 0x0022[0m
+[0;32mI (1687) i2s_master: Sample 93: 0x0024[0m
+[0;32mI (1691) i2s_master: Sample 94: 0x0026[0m
+[0;32mI (1695) i2s_master: Sample 95: 0x0028[0m
+[0;32mI (1700) i2s_master: Sample 96: 0x002A[0m
+[0;32mI (1704) i2s_master: Sample 97: 0x002C[0m
+[0;32mI (1709) i2s_master: Sample 98: 0x002E[0m
+[0;32mI (1713) i2s_master: Sample 99: 0x0030[0m
+[0;33mW (1718) i2s_master:  0 samples collected, READING...[0m
+[0;31mE (1723) i2s_master: [READ] Error reading Data: Read overflow[0m
+[0;33mW (1751) i2s_master:  2046 samples collected, READING...[0m
+[0;31mE (1752) i2s_master: [READ] Error reading Data: Read overflow[0m
+[0;33mW (1854) i2s_master:  4092 samples collected, READING...[0m
+[0;31mE (1854) i2s_master: [READ] Error reading Data: Read overflow[0m
+[0;33mW (1956) i2s_master:  6138 samples collected, READING...[0m
+[0;31mE (1956) i2s_master: [READ] Error reading Data: Read overflow[0m
+[0;33mW (2058) i2s_master:  8184 samples collected, READING...[0m
+[0;31mE (2059) i2s_master: [READ] Error reading Data: Read overflow[0m
+[0;32mI (2161) i2s_master: Task notified end of acquisition successfully 10000 samples collected. [0m
+[0;32mI (2161) i2s_master: Sample 0: 0xC5B8[0m
+[0;32mI (2163) i2s_master: Sample 1: 0xCDBC[0m
+[0;32mI (2167) i2s_master: Sample 2: 0x0800[0m
+[0;32mI (2172) i2s_master: Sample 3: 0x0030[0m
+[0;32mI (2176) i2s_master: Sample 4: 0x0032[0m
+[0;32mI (2180) i2s_master: Sample 5: 0x0034[0m
+[0;32mI (2185) i2s_master: Sample 6: 0x0036[0m
+[0;32mI (2189) i2s_master: Sample 7: 0x0038[0m
+[0;32mI (2193) i2s_master: Sample 8: 0x003A[0m
+[0;32mI (2198) i2s_master: Sample 9: 0x003C[0m
+[0;32mI (2202) i2s_master: Sample 10: 0x003E[0m
+[0;32mI (2207) i2s_master: Sample 11: 0x0040[0m
+[0;32mI (2211) i2s_master: Sample 12: 0x0042[0m
+[0;32mI (2215) i2s_master: Sample 13: 0x0044[0m
+[0;32mI (2220) i2s_master: Sample 14: 0x0046[0m
+[0;32mI (2224) i2s_master: Sample 15: 0x0048[0m
+[0;32mI (2229) i2s_master: Sample 16: 0x004A[0m
+[0;32mI (2233) i2s_master: Sample 17: 0x004C[0m
+[0;32mI (2237) i2s_master: Sample 18: 0x004E[0m
+[0;32mI (2242) i2s_master: Sample 19: 0x0050[0m
+[0;32mI (2246) i2s_master: Sample 20: 0x0052[0m
+[0;32mI (2251) i2s_master: Sample 21: 0x0054[0m
+[0;32mI (2255) i2s_master: Sample 22: 0x0056[0m
+[0;32mI (2260) i2s_master: Sample 23: 0x0058[0m
+[0;32mI (2264) i2s_master: Sample 24: 0x005A[0m
+[0;32mI (2268) i2s_master: Sample 25: 0x005C[0m
+[0;32mI (2273) i2s_master: Sample 26: 0x005E[0m
+[0;32mI (2277) i2s_master: Sample 27: 0x0060[0m
+[0;32mI (2282) i2s_master: Sample 28: 0x0062[0m
+[0;32mI (2286) i2s_master: Sample 29: 0x0000[0m
+[0;32mI (2291) i2s_master: Sample 30: 0x0002[0m
+[0;32mI (2295) i2s_master: Sample 31: 0x0004[0m
+[0;32mI (2299) i2s_master: Sample 32: 0x0006[0m
+[0;32mI (2304) i2s_master: Sample 33: 0x0008[0m
+[0;32mI (2308) i2s_master: Sample 34: 0x000A[0m
+[0;32mI (2313) i2s_master: Sample 35: 0x000C[0m
+[0;32mI (2317) i2s_master: Sample 36: 0x000E[0m
+[0;32mI (2322) i2s_master: Sample 37: 0x0010[0m
+[0;32mI (2326) i2s_master: Sample 38: 0x0012[0m
+[0;32mI (2330) i2s_master: Sample 39: 0x0014[0m
+[0;32mI (2335) i2s_master: Sample 40: 0x0016[0m
+[0;32mI (2339) i2s_master: Sample 41: 0x0018[0m
+[0;32mI (2344) i2s_master: Sample 42: 0x001A[0m
+[0;32mI (2348) i2s_master: Sample 43: 0x001C[0m
+[0;32mI (2353) i2s_master: Sample 44: 0x001E[0m
+[0;32mI (2357) i2s_master: Sample 45: 0x0020[0m
+[0;32mI (2361) i2s_master: Sample 46: 0x0022[0m
+[0;32mI (2366) i2s_master: Sample 47: 0x0024[0m
+[0;32mI (2370) i2s_master: Sample 48: 0x0026[0m
+[0;32mI (2375) i2s_master: Sample 49: 0x0028[0m
+[0;32mI (2379) i2s_master: Sample 50: 0x002A[0m
+[0;32mI (2384) i2s_master: Sample 51: 0x002C[0m
+[0;32mI (2388) i2s_master: Sample 52: 0x002E[0m
+[0;32mI (2392) i2s_master: Sample 53: 0x0030[0m
+[0;32mI (2397) i2s_master: Sample 54: 0x0032[0m
+[0;32mI (2401) i2s_master: Sample 55: 0x0034[0m
+[0;32mI (2406) i2s_master: Sample 56: 0x0036[0m
+[0;32mI (2410) i2s_master: Sample 57: 0x0038[0m
+[0;32mI (2415) i2s_master: Sample 58: 0x003A[0m
+[0;32mI (2419) i2s_master: Sample 59: 0x003C[0m
+[0;32mI (2423) i2s_master: Sample 60: 0x003E[0m
+[0;32mI (2428) i2s_master: Sample 61: 0x0040[0m
+[0;32mI (2432) i2s_master: Sample 62: 0x0042[0m
+[0;32mI (2437) i2s_master: Sample 63: 0x0044[0m
+[0;32mI (2441) i2s_master: Sample 64: 0x0046[0m
+[0;32mI (2446) i2s_master: Sample 65: 0x0048[0m
+[0;32mI (2450) i2s_master: Sample 66: 0x004A[0m
+[0;32mI (2454) i2s_master: Sample 67: 0x004C[0m
+[0;32mI (2459) i2s_master: Sample 68: 0x004E[0m
+[0;32mI (2463) i2s_master: Sample 69: 0x0050[0m
+[0;32mI (2468) i2s_master: Sample 70: 0x0052[0m
+[0;32mI (2472) i2s_master: Sample 71: 0x0054[0m
+[0;32mI (2477) i2s_master: Sample 72: 0x0056[0m
+[0;32mI (2481) i2s_master: Sample 73: 0x0058[0m
