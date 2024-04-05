@@ -1,0 +1,616 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x168c
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2da8
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time 13:21:19[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b34ch ( 45900) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001b374 vaddr=3fc92800 size=02b08h ( 11016) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001de84 vaddr=40374000 size=02194h (  8596) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1dcc4h (122052) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=0003dcec vaddr=40376194 size=0c644h ( 50756) load[0m
+[0;32mI (161) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (161) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (173) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (173) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (177) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (182) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (187) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (193) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (198) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (203) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (209) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (215) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (221) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (226) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (231) esp_psram: Speed: 40MHz[0m
+[0;32mI (235) cpu_start: Pro cpu up.[0m
+[0;32mI (238) cpu_start: Starting app cpu, entry point is 0x40375344[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (976) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (985) cpu_start: Pro cpu start user code[0m
+[0;32mI (985) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (985) cpu_start: Application information:[0m
+[0;32mI (988) cpu_start: Project name:     i2s-bit-banging-master[0m
+[0;32mI (994) cpu_start: App version:      3668fcd-dirty[0m
+[0;32mI (1000) cpu_start: Compile time:     Apr  5 2024 13:45:27[0m
+[0;32mI (1006) cpu_start: ELF file SHA256:  8bf67cfc...[0m
+[0;32mI (1012) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (1017) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1022) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (1027) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (1032) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1039) heap_init: At 3FC95D90 len 00053980 (334 KiB): DRAM[0m
+[0;32mI (1045) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (1052) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1058) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (1065) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1073) spi_flash: detected chip: generic[0m
+[0;32mI (1077) spi_flash: flash io: dio[0m
+[0;33mW (1081) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (1095) app_start: Starting scheduler on CPU0[0m
+[0;32mI (1099) app_start: Starting scheduler on CPU1[0m
+[0;32mI (1099) main_task: Started on CPU0[0m
+[0;32mI (1109) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1117) main_task: Calling app_main()[0m
+i2s read start
+-----------------------------
+[0;32mI (1127) i2s_master: i2s driver init success[0m
+[0;32mI (2155) i2s_master: Reading complete![0m
+[0;32mI (2155) i2s_master: Sample   0:    0[0m
+[0;32mI (2155) i2s_master: Sample  10:   82[0m
+[0;32mI (2157) i2s_master: Sample  20:   92[0m
+[0;32mI (2161) i2s_master: Sample  30:    2[0m
+[0;32mI (2165) i2s_master: Sample  40:   12[0m
+[0;32mI (2170) i2s_master: Sample  50:   22[0m
+[0;32mI (2174) i2s_master: Sample  60:   32[0m
+[0;32mI (2179) i2s_master: Sample  70:   42[0m
+[0;32mI (2183) i2s_master: Sample  80:   52[0m
+[0;32mI (2187) i2s_master: Sample  90:    2[0m
+[0;32mI (2192) i2s_master: Sample 100:   12[0m
+[0;32mI (2196) i2s_master: Sample 110:   22[0m
+[0;32mI (2200) i2s_master: Sample 120:   32[0m
+[0;32mI (2205) i2s_master: Sample 130:   42[0m
+[0;32mI (2209) i2s_master: Sample 140:   52[0m
+[0;32mI (2213) i2s_master: Sample 150:   62[0m
+[0;32mI (2218) i2s_master: Sample 160:   72[0m
+[0;32mI (2222) i2s_master: Sample 170:   82[0m
+[0;32mI (2226) i2s_master: Sample 180:   92[0m
+[0;32mI (2231) i2s_master: Sample 190:    2[0m
+[0;32mI (2235) i2s_master: Sample 200:   12[0m
+[0;32mI (2239) i2s_master: Sample 210:   22[0m
+[0;32mI (2244) i2s_master: Sample 220:   32[0m
+[0;32mI (2248) i2s_master: Sample 230:   42[0m
+[0;32mI (2252) i2s_master: Sample 240:   52[0m
+[0I : overflow!
+;32mI (2257) i2s_master: Sample 250:   62[0m
+[0;32mI (2262) i2s_master: Sample 260:   72[0m
+[0;32I : overflow!
+mI (2267) i2s_master: Sample 270:   82[0m
+[0;32mI (2272) i2s_master: Sample 280:   92[0m
+[0;32mI I : overflow!
+(2277) i2s_master: Sample 290:    2[0m
+[0;32mI (2282) i2s_master: Sample 300:   12[0m
+[0;32mI (22I : overflow!
+87) i2s_master: Sample 310:   22[0m
+[0;32mI (2292) i2s_master: Sample 320:   32[0m
+[0;32mI (2297)I : overflow!
+ i2s_master: Sample 330:   42[0m
+[0;32mI (2302) i2s_master: Sample 340:   52[0m
+[0;32mI (2307) i2I : overflow!
+s_master: Sample 350:   62[0m
+[0;32mI (2312) i2s_master: Sample 360:   72[0m
+[0;32mI (2317) i2s_mI : overflow!
+aster: Sample 370:   82[0m
+[0;32mI (2322) i2s_master: Sample 380:   92[0m
+[0;32mI (2326) i2s_mastI : overflow!
+er: Sample 390:    2[0m
+[0;32mI (2332) i2s_master: Sample 400:   12[0m
+[0;32mI (2336) i2s_masterI : overflow!
+: Sample 410:   22[0m
+[0;32mI (2342) i2s_master: Sample 420:   32[0m
+[0;32mI (2346) i2s_master: SI : overflow!
+ample 430:   42[0m
+[0;32mI (2352) i2s_master: Sample 440:   52[0m
+[0;32mI (2356) i2s_master: SampI : overflow!
+le 450:   62[0m
+[0;32mI (2362) i2s_master: Sample 460:   72[0m
+[0;32mI (2366) i2s_master: Sample I : overflow!
+470:   82[0m
+[0;32mI (2372) i2s_master: Sample 480:   92[0m
+[0;32mI (2376) i2s_master: Sample 490I : overflow!
+:    2[0m
+[0;32mI (2382) i2s_master: Sample 500:   12[0m
+[0;32mI (2386) i2s_master: Sample 510:  I : overflow!
+ 22[0m
+[0;32mI (2392) i2s_master: Sample 520:   32[0m
+[0;32mI (2396) i2s_master: Sample 530:   42I : overflow!
+[0m
+[0;32mI (2402) i2s_master: Sample 540:   52[0m
+[0;32mI (2406) i2s_master: Sample 550:   62[I : overflow!
+0m
+[0;32mI (2412) i2s_master: Sample 560:   72[0m
+[0;32mI (2416) i2s_master: Sample 570:   82[0mI : overflow!
+[0;32mI (2422) i2s_master: Sample 580:   92[0m
+[0;32mI (2426) i2s_master: Sample 590:    2[0m
+[I : overflow!
+0;32mI (2431) i2s_master: Sample 600:   12[0m
+[0;32mI (2436) i2s_master: Sample 610:   22[0m
+[0;3I : overflow!
+2mI (2441) i2s_master: Sample 620:   32[0m
+[0;32mI (2446) i2s_master: Sample 630:   42[0m
+[0;32mII : overflow!
+ (2451) i2s_master: Sample 640:   52[0m
+[0;32mI (2456) i2s_master: Sample 650:   62[0m
+[0;32mI (2I : overflow!
+461) i2s_master: Sample 660:   72[0m
+[0;32mI (2466) i2s_master: Sample 670:   82[0m
+[0;32mI (2471I : overflow!
+) i2s_master: Sample 680:   92[0m
+[0;32mI (2476) i2s_master: Sample 690:    2[0m
+[0;32mI (2481) I : overflow!
+i2s_master: Sample 700:   12[0m
+[0;32mI (2486) i2s_master: Sample 710:   22[0m
+[0;32mI (2491) i2sI : overflow!
+_master: Sample 720:   32[0m
+[0;32mI (2496) i2s_master: Sample 730:   42[0m
+[0;32mI (2501) i2s_maI : overflow!
+ster: Sample 740:   52[0m
+[0;32mI (2506) i2s_master: Sample 750:   62[0m
+[0;32mI (2510) i2s_masteI : overflow!
+r: Sample 760:   72[0m
+[0;32mI (2516) i2s_master: Sample 770:   82[0m
+[0;32mI (2520) i2s_master: I : overflow!
+Sample 780:   92[0m
+[0;32mI (2526) i2s_master: Sample 790:    2[0m
+[0;32mI (2530) i2s_master: SamI : overflow!
+ple 800:   12[0m
+[0;32mI (2536) i2s_master: Sample 810:   22[0m
+[0;32mI (2540) i2s_master: SampleI : overflow!
+ 820:   32[0m
+[0;32mI (2546) i2s_master: Sample 830:   42[0m
+[0;32mI (2550) i2s_master: Sample 8I : overflow!
+40:   52[0m
+[0;32mI (2556) i2s_master: Sample 850:   62[0m
+[0;32mI (2560) i2s_master: Sample 860:I : overflow!
+   72[0m
+[0;32mI (2566) i2s_master: Sample 870:   82[0m
+[0;32mI (2570) i2s_master: Sample 880:   I : overflow!
+92[0m
+[0;32mI (2576) i2s_master: Sample 890:    2[0m
+[0;32mI (2580) i2s_master: Sample 900:   12I : overflow!
+[0m
+[0;32mI (2586) i2s_master: Sample 910:   22[0m
+[0;32mI (2590) i2s_master: Sample 920:   32[0mI : overflow!
+
+[0;32mI (2596) i2s_master: Sample 930:   42[0m
+[0;32mI (2600) i2s_master: Sample 940:   52[0m
+I : overflow!
+[0;32mI (2605) i2s_master: Sample 950:   62[0m
+[0;32mI (2610) i2s_master: Sample 960:   72[0m
+[0;I : overflow!
+32mI (2615) i2s_master: Sample 970:   82[0m
+[0;32mI (2620) i2s_master: Sample 980:   92[0m
+[0;32I : overflow!
+mI (2625) i2s_master: Sample 990:    2[0m
+[0;32mI (2630) i2s_master: Sample 1000:   12[0m
+[0;32mII : overflow!
+ (2635) i2s_master: Sample 1010:   22[0m
+[0;32mI (2640) i2s_master: Sample 1020:   32[0m
+[0;32mI I : overflow!
+(2645) i2s_master: Sample 1030:   42[0m
+[0;32mI (2651) i2s_master: Sample 1040:   52[0m
+[0;32mI (I : overflow!
+2655) i2s_master: Sample 1050:   62[0m
+[0;32mI (2661) i2s_master: Sample 1060:   72[0m
+[0;32mI (2I : overflow!
+665) i2s_master: Sample 1070:   82[0m
+[0;32mI (2671) i2s_master: Sample 1080:   92[0m
+[0;32mI (26I : overflow!
+75) i2s_master: Sample 1090:    2[0m
+[0;32mI (2681) i2s_master: Sample 1100:   12[0m
+[0;32mI (268I : overflow!
+5) i2s_master: Sample 1110:   22[0m
+[0;32mI (2691) i2s_master: Sample 1120:   32[0m
+[0;32mI (2696I : overflow!
+) i2s_master: Sample 1130:   42[0m
+[0;32mI (2701) i2s_master: Sample 1140:   52[0m
+[0;32mI (2706I : overflow!
+) i2s_master: Sample 1150:   62[0m
+[0;32mI (2712) i2s_master: Sample 1160:   72[0m
+[0;32mI (2716)I : overflow!
+ i2s_master: Sample 1170:   82[0m
+[0;32mI (2722) i2s_master: Sample 1180:   92[0m
+[0;32mI (2726) I : overflow!
+i2s_master: Sample 1190:    2[0m
+[0;32mI (2732) i2s_master: Sample 1200:   12[0m
+[0;32mI (2736) iI : overflow!
+2s_master: Sample 1210:   22[0m
+[0;32mI (2742) i2s_master: Sample 1220:   32[0m
+[0;32mI (2746) i2I : overflow!
+s_master: Sample 1230:   42[0m
+[0;32mI (2752) i2s_master: Sample 1240:   52[0m
+[0;32mI (2757) i2sI : overflow!
+_master: Sample 1250:   62[0m
+[0;32mI (2762) i2s_master: Sample 1260:   72[0m
+[0;32mI (2767) i2s_I : overflow!
+master: Sample 1270:   82[0m
+[0;32mI (2772) i2s_master: Sample 1280:   92[0m
+[0;32mI (2777) i2s_I : overflow!
+master: Sample 1290:    2[0m
+[0;32mI (2783) i2s_master: Sample 1300:   12[0m
+[0;32mI (2787) i2s_mI : overflow!
+aster: Sample 1310:   22[0m
+[0;32mI (2793) i2s_master: Sample 1320:   32[0m
+[0;32mI (2797) i2s_maI : overflow!
+ster: Sample 1330:   42[0m
+[0;32mI (2803) i2s_master: Sample 1340:   52[0m
+[0;32mI (2807) i2s_masI : overflow!
+ter: Sample 1350:   62[0m
+[0;32mI (2813) i2s_master: Sample 1360:   72[0m
+[0;32mI (2818) i2s_mastI : overflow!
+er: Sample 1370:   82[0m
+[0;32mI (2823) i2s_master: Sample 1380:   92[0m
+[0;32mI (2828) i2s_masteI : overflow!
+r: Sample 1390:    2[0m
+[0;32mI (2833) i2s_master: Sample 1400:   12[0m
+[0;32mI (2838) i2s_masterI : overflow!
+: Sample 1410:   22[0m
+[0;32mI (2844) i2s_master: Sample 1420:   32[0m
+[0;32mI (2848) i2s_masterI : overflow!
+: Sample 1430:   42[0m
+[0;32mI (2854) i2s_master: Sample 1440:   52[0m
+[0;32mI (2858) i2s_master:I : overflow!
+ Sample 1450:   62[0m
+[0;32mI (2864) i2s_master: Sample 1460:   72[0m
+[0;32mI (2868) i2s_master: I : overflow!
+Sample 1470:   82[0m
+[0;32mI (2874) i2s_master: Sample 1480:   92[0m
+[0;32mI (2878) i2s_master: SI : overflow!
+ample 1490:   22[0m
+[0;32mI (2884) i2s_master: Sample 1500:   32[0m
+[0;32mI (2889) i2s_master: SaI : overflow!
+mple 1510:   42[0m
+[0;32mI (2894) i2s_master: Sample 1520:   52[0m
+[0;32mI (2899) i2s_master: SamI : overflow!
+ple 1530:    2[0m
+[0;32mI (2904) i2s_master: Sample 1540:   12[0m
+[0;32mI (2909) i2s_master: SampI : overflow!
+le 1550:   22[0m
+[0;32mI (2915) i2s_master: Sample 1560:   32[0m
+[0;32mI (2919) i2s_master: SampI : overflow!
+le 1570:   42[0m
+[0;32mI (2925) i2s_master: Sample 1580:   52[0m
+[0;32mI (2929) i2s_master: SamplI : overflow!
+e 1590:   62[0m
+[0;32mI (2935) i2s_master: Sample 1600:   72[0m
+[0;32mI (2939) i2s_master: SampleI : overflow!
+ 1610:   82[0m
+[0;32mI (2945) i2s_master: Sample 1620:   92[0m
+[0;32mI (2950) i2s_master: Sample I : overflow!
+1630:    2[0m
+[0;32mI (2955) i2s_master: Sample 1640:   12[0m
+[0;32mI (2960) i2s_master: Sample 1I : overflow!
+650:   22[0m
+[0;32mI (2965) i2s_master: Sample 1660:   32[0m
+[0;32mI (2970) i2s_master: Sample 16I : overflow!
+70:   42[0m
+[0;32mI (2976) i2s_master: Sample 1680:   52[0m
+[0;32mI (2980) i2s_master: Sample 169I : overflow!
+0:   62[0m
+[0;32mI (2986) i2s_master: Sample 1700:   72[0m
+[0;32mI (2990) i2s_master: Sample 171I : overflow!
+:   82[0m
+[0;32mI (2996) i2s_master: Sample 1720:   92[0m
+[0;32mI (3000) i2s_master: Sample 1730:I : overflow!
+    2[0m
+[0;32mI (3006) i2s_master: Sample 1740:   12[0m
+[0;32mI (3010) i2s_master: Sample 1750: I : overflow!
+  22[0m
+[0;32mI (3016) i2s_master: Sample 1760:   32[0m
+[0;32mI (3021) i2s_master: Sample 1770:  I : overflow!
+ 42[0m
+[0;32mI (3026) i2s_master: Sample 1780:   52[0m
+[0;32mI (3031) i2s_master: Sample 1790:   I : overflow!
+62[0m
+[0;32mI (3036) i2s_master: Sample 1800:   72[0m
+[0;32mI (3041) i2s_master: Sample 1810:   8I : overflow!
+2[0m
+[0;32mI (3047) i2s_master: Sample 1820:   92[0m
+[0;32mI (3051) i2s_master: Sample 1830:    2I : overflow!
+[0m
+[0;32mI (3057) i2s_master: Sample 1840:   12[0m
+[0;32mI (3061) i2s_master: Sample 1850:   22I : overflow!
+[0m
+[0;32mI (3067) i2s_master: Sample 1860:   32[0m
+[0;32mI (3071) i2s_master: Sample 1870:   42I : overflow!
+[0m
+[0;32mI (3077) i2s_master: Sample 1880:   52[0m
+[0;32mI (3081) i2s_master: Sample 1890:   62[I : overflow!
+0m
+[0;32mI (3087) i2s_master: Sample 1900:   72[0m
+[0;32mI (3092) i2s_master: Sample 1910:   82[0I : overflow!
+m
+[0;32mI (3097) i2s_master: Sample 1920:   92[0m
+[0;32mI (3102) i2s_master: Sample 1930:    2[0mI : overflow!
+
+[0;32mI (3107) i2s_master: Sample 1940:   12[0m
+[0;32mI (3112) i2s_master: Sample 1950:   22[0mI : overflow!
+[0;32mI (3118) i2s_master: Sample 1960:   32[0m
+[0;32mI (3122) i2s_master: Sample 1970:   42[0m
+I : overflow!
+[0;32mI (3128) i2s_master: Sample 1980:   52[0m
+[0;32mI (3132) i2s_master: Sample 1990:   62[0m
+I : overflow!
+[0;32mI (3138) i2s_master: Sample 2000:   72[0m
+[0;32mI (3142) i2s_master: Sample 2010:   82[0m
+I : overflow!
+[0;32mI (3147) i2s_master: Sample 2020:   92[0m
+[0;32mI (3153) i2s_master: Sample 2030:    2[0m
+[I : overflow!
+0;32mI (3157) i2s_master: Sample 2040:   12[0m
+[0;32mI (3163) i2s_master: Sample 2050:   22[0m
+[0I : overflow!
+;32mI (3167) i2s_master: Sample 2060:   32[0m
+[0;32mI (3173) i2s_master: Sample 2070:   42[0m
+[0;I : overflow!
+32mI (3177) i2s_master: Sample 2080:   52[0m
+[0;32mI (3183) i2s_master: Sample 2090:   62[0m
+[0;3I : overflow!
+2mI (3187) i2s_master: Sample 2100:   72[0m
+[0;32mI (3193) i2s_master: Sample 2110:   82[0m
+[0;32I : overflow!
+mI (3198) i2s_master: Sample 2120:   92[0m
+[0;32mI (3203) i2s_master: Sample 2130:    2[0m
+[0;32mI : overflow!
+I (3208) i2s_master: Sample 2140:   12[0m
+[0;32mI (3213) i2s_master: Sample 2150:   22[0m
+[0;32mI : overflow!
+I (3218) i2s_master: Sample 2160:   32[0m
+[0;32mI (3224) i2s_master: Sample 2170:   42[0m
+[0;32mII : overflow!
+ (3228) i2s_master: Sample 2180:   52[0m
+[0;32mI (3234) i2s_master: Sample 2190:   62[0m
+[0;32mI I : overflow!
+(3238) i2s_master: Sample 2200:   72[0m
+[0;32mI (3244) i2s_master: Sample 2210:   82[0m
+[0;32mI (I : overflow!
+3248) i2s_master: Sample 2220:   92[0m
+[0;32mI (3254) i2s_master: Sample 2230:    2[0m
+[0;32mI (3I : overflow!
+259) i2s_master: Sample 2240:   12[0m
+[0;32mI (3264) i2s_master: Sample 2250:   42[0m
+[0;32mI (32I : overflow!
+69) i2s_master: Sample 2260:   52[0m
+[0;32mI (3274) i2s_master: Sample 2270:   62[0m
+[0;32mI (327I : overflow!
+9) i2s_master: Sample 2280:   72[0m
+[0;32mI (3285) i2s_master: Sample 2290:   82[0m
+[0;32mI (328I : overflow!
+9) i2s_master: Sample 2300:   92[0m
+[0;32mI (3295) i2s_master: Sample 2310:   82[0m
+[0;32mI (3299I : overflow!
+) i2s_master: Sample 2320:   92[0m
+[0;32mI (3305) i2s_master: Sample 2330:    2[0m
+[0;32mI (3309)I : overflow!
+ i2s_master: Sample 2340:   12[0m
+[0;32mI (3315) i2s_master: Sample 2350:   22[0m
+[0;32mI (3319) I : overflow!
+i2s_master: Sample 2360:   32[0m
+[0;32mI (3325) i2s_master: Sample 2370:   42[0m
+[0;32mI (3330) iI : overflow!
+2s_master: Sample 2380:   52[0m
+[0;32mI (3335) i2s_master: Sample 2390:   62[0m
+[0;32mI (3340) i2I : overflow!
+s_master: Sample 2400:   72[0m
+[0;32mI (3345) i2s_master: Sample 2410:   82[0m
+[0;32mI (3350) i2sI : overflow!
+_master: Sample 2420:   92[0m
+[0;32mI (3356) i2s_master: Sample 2430:    2[0m
+[0;32mI (3360) i2s_I : overflow!
+master: Sample 2440:   12[0m
+[0;32mI (3366) i2s_master: Sample 2450:   22[0m
+[0;32mI (3370) i2s_I : overflow!
+master: Sample 2460:   32[0m
+[0;32mI (3376) i2s_master: Sample 2470:   42[0m
+[0;32mI (3380) i2s_mI : overflow!
+aster: Sample 2480:   52[0m
+[0;32mI (3386) i2s_master: Sample 2490:   62[0m
+[0;32mI (3391) i2s_maI : overflow!
+ster: Sample 2500:   72[0m
+[0;32mI (3396) i2s_master: Sample 2510:   82[0m
+[0;32mI (3401) i2s_masI : overflow!
+ter: Sample 2520:   92[0m
+[0;32mI (3406) i2s_master: Sample 2530:    2[0m
+[0;32mI (3411) i2s_mastI : overflow!
+er: Sample 2540:   12[0m
+[0;32mI (3417) i2s_master: Sample 2550:   22[0m
+[0;32mI (3421) i2s_masteI : overflow!
+r: Sample 2560:   32[0m
+[0;32mI (3427) i2s_master: Sample 2570:   42[0m
+[0;32mI (3431) i2s_masterI : overflow!
+: Sample 2580:   52[0m
+[0;32mI (3437) i2s_master: Sample 2590:   62[0m
+[0;32mI (3441) i2s_masterI : overflow!
+: Sample 2600:   72[0m
+[0;32mI (3447) i2s_master: Sample 2610:   82[0m
+[0;32mI (3451) i2s_master:I : overflow!
+ Sample 2620:   92[0m
+[0;32mI (3457) i2s_master: Sample 2630:    2[0m
+[0;32mI (3462) i2s_master: I : overflow!
+Sample 2640:   12[0m
+[0;32mI (3467) i2s_master: Sample 2650:   22[0m
+[0;32mI (3472) i2s_master: SI : overflow!
+ample 2660:   32[0m
+[0;32mI (3478) i2s_master: Sample 2670:   42[0m
+[0;32mI (3482) i2s_master: SaI : overflow!
+mple 2680:   52[0m
+[0;32mI (3488) i2s_master: Sample 2690:   62[0m
+[0;32mI (3492) i2s_master: SamI : overflow!
+ple 2700:   72[0m
+[0;32mI (3498) i2s_master: Sample 2710:   82[0m
+[0;32mI (3502) i2s_master: SampI : overflow!
+le 2720:   92[0m
+[0;32mI (3508) i2s_master: Sample 2730:    2[0m
+[0;32mI (3512) i2s_master: SampI : overflow!
+le 2740:   12[0m
+[0;32mI (3518) i2s_master: Sample 2750:   22[0m
+[0;32mI (3523) i2s_master: SamplI : overflow!
+e 2760:   32[0m
+[0;32mI (3528) i2s_master: Sample 2770:   42[0m
+[0;32mI (3533) i2s_master: SampleI : overflow!
+ 2780:   52[0m
+[0;32mI (3538) i2s_master: Sample 2790:   62[0m
+[0;32mI (3543) i2s_master: Sample I : overflow!
+2800:   72[0m
+[0;32mI (3549) i2s_master: Sample 2810:   82[0m
+[0;32mI (3553) i2s_master: Sample 2I : overflow!
+820:   92[0m
+[0;32mI (3559) i2s_master: Sample 2830:    2[0m
+[0;32mI (3563) i2s_master: Sample 28I : overflow!
+40:   12[0m
+[0;32mI (3569) i2s_master: Sample 2850:   22[0m
+[0;32mI (3573) i2s_master: Sample 286I : overflow!
+0:   32[0m
+[0;32mI (3579) i2s_master: Sample 2870:   42[0m
+[0;32mI (3583) i2s_master: Sample 288I : overflow!
+0:   52[0m
+[0;32mI (3589) i2s_master: Sample 2890:   62[0m
+[0;32mI (3594) i2s_master: Sample 2900I : overflow!
+:   72[0m
+[0;32mI (3599) i2s_master: Sample 2910:   82[0m
+[0;32mI (3604) i2s_master: Sample 2920:I : overflow!
+   92[0m
+[0;32mI (3610) i2s_master: Sample 2930:    2[0m
+[0;32mI (3614) i2s_master: Sample 2940: I : overflow!
+  12[0m
+[0;32mI (3620) i2s_master: Sample 2950:   22[0m
+[0;32mI (3624) i2s_master: Sample 2960:  I : overflow!
+ 32[0m
+[0;32mI (3630) i2s_master: Sample 2970:    2[0m
+[0;32mI (3634) i2s_master: Sample 2980:   I : overflow!
+12[0m
+[0;32mI (3640) i2s_master: Sample 2990:   22[0m
+[0;32mI (3644) i2s_master: Sample 3000:   3I : overflow!
+2[0m
+[0;32mI (3650) i2s_master: Sample 3010:   42[0m
+[0;32mI (3655) i2s_master: Sample 3020:   5I : overflow!
+2[0m
+[0;32mI (3660) i2s_master: Sample 3030:   62[0m
+[0;32mI (3665) i2s_master: Sample 3040:   72I : overflow!
+[0m
+[0;32mI (3670) i2s_master: Sample 3050:   82[0m
+[0;32mI (3675) i2s_master: Sample 3060:   92I : overflow!
+[0m
+[0;32mI (3681) i2s_master: Sample 3070:    2[0m
+[0;32mI (3685) i2s_master: Sample 3080:   12[I : overflow!
+0m
+[0;32mI (3691) i2s_master: Sample 3090:   22[0m
+[0;32mI (3695) i2s_master: Sample 3100:   32[0I : overflow!
+m
+[0;32mI (3701) i2s_master: Sample 3110:   42[0m
+[0;32mI (3705) i2s_master: Sample 3120:   52[0mI : overflow!
+
+[0;32mI (3711) i2s_master: Sample 3130:   62[0m
+[0;32mI (3716) i2s_master: Sample 3140:   72[0mI : overflow!
+[0;32mI (3721) i2s_master: Sample 3150:   82[0m
+[0;32mI (3726) i2s_master: Sample 3160:   92[0m
+I : overflow!
+[0;32mI (3731) i2s_master: Sample 3170:    2[0m
+[0;32mI (3736) i2s_master: Sample 3180:   12[0m
+I : overflow!
+[0;32mI (3741) i2s_master: Sample 3190:   22[0m
+[0;32mI (3746) i2s_master: Sample 3200:   32[0m
+I : overflow!
+[0;32mI (3750) i2s_master: Sample 3210:   42[0m
+[0;32mI (3756) i2s_master: Sample 3220:   52[0m
+[I : overflow!
+0;32mI (3761) i2s_master: Sample 3230:   62[0m
+[0;32mI (3766) i2s_master: Sample 3240:   72[0m
+[0I : overflow!
+;32mI (3771) i2s_master: Sample 3250:   82[0m
+[0;32mI (3776) i2s_master: Sample 3260:   92[0m
+[0;I : overflow!
+32mI (3781) i2s_master: Sample 3270:    2[0m
+[0;32mI (3787) i2s_master: Sample 3280:   12[0m
+[0;3I : overflow!
+2mI (3791) i2s_master: Sample 3290:   22[0m
+[0;32mI (3797) i2s_master: Sample 3300:   32[0m
+[0;32I : overflow!
+mI (3801) i2s_master: Sample 3310:   42[0m
+[0;32mI (3807) i2s_master: Sample 3320:   52[0m
+[0;32I : overflow!
+mI (3811) i2s_master: Sample 3330:   62[0m
+[0;32mI (3817) i2s_master: Sample 3340:   72[0m
+[0;32mI : overflow!
+I (3821) i2s_master: Sample 3350:   82[0m
+[0;32mI (3827) i2s_master: Sample 3360:   92[0m
+[0;32mII : overflow!
+ (3832) i2s_master: Sample 3370:    2[0m
+[0;32mI (3837) i2s_master: Sample 3380:   12[0m
+[0;32mI I : overflow!
+(3842) i2s_master: Sample 3390:   22[0m
+[0;32mI (3848) i2s_master: Sample 3400:   32[0m
+[0;32mI (I : overflow!
+3852) i2s_master: Sample 3410:   42[0m
+[0;32mI (3858) i2s_master: Sample 3420:   52[0m
+[0;32mI (3I : overflow!
+862) i2s_master: Sample 3430:   62[0m
+[0;32mI (3868) i2s_master: Sample 3440:   72[0m
+[0;32mI (38I : overflow!
+72) i2s_master: Sample 3450:   82[0m
+[0;32mI (3878) i2s_master: Sample 3460:   92[0m
+[0;32mI (38I : overflow!
+82) i2s_master: Sample 3470:    2[0m
+[0;32mI (3888) i2s_master: Sample 3480:   12[0m
+[0;32mI (389I : overflow!
+3) i2s_master: Sample 3490:   22[0m
+[0;32mI (3898) i2s_master: Sample 3500:   32[0m
+[0;32mI (3903I : overflow!
+) i2s_master: Sample 3510:   42[0m
+[0;32mI (3908) i2s_master: Sample 3520:   52[0m
+[0;32mI (3913)I : overflow!
+ i2s_master: Sample 3530:   62[0m
+[0;32mI (3919) i2s_master: Sample 3540:   72[0m
+[0;32mI (3923) I : overflow!
+i2s_master: Sample 3550:   82[0m
+[0;32mI (3929) i2s_master: Sample 3560:   92[0m
+[0;32mI (3933) iI : overflow!
+2s_master: Sample 3570:    2[0m
+[0;32mI (3939) i2s_master: Sample 3580:   12[0m
+[0;32mI (3943) i2I : overflow!
+s_master: Sample 3590:   22[0m
+[0;32mI (3949) i2s_master: Sample 3600:   32[0m
+[0;32mI (3953) i2I : overflow!
+s_master: Sample 3610:   42[0m
+[0;32mI (3959) i2s_master: Sample 3620:   52[0m
+[0;32mI (3964) i2sI : overflow!
+_master: Sample 3630:   62[0m
+[0;32mI (3969) i2s_master: Sample 3640:   72[0m
+[0;32mI (3974) i2s_I : overflow!
+master: Sample 3650:   82[0m
+[0;32mI (3980) i2s_master: Sample 3660:   92[0m
+[0;32mI (3984) i2s_mI : overflow!
+aster: Sample 3670:    2[0m
+[0;32mI (3990) i2s_master: Sample 3680:   12[0m
+[0;32mI (3994) i2s_maI : overflow!
+ster: Sample 3690:   42[0m
+[0;32mI (4000) i2s_master: Sample 3700:   52[0m

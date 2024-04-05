@@ -20,16 +20,24 @@ static constexpr std::uint32_t SAMPLE_RATE = 100'000; // Max 15000
 static constexpr std::size_t DMA_BUFFER_LENGTH = 1023;
 static i2s_chan_handle_t rx_handle = nullptr;
 
-typedef enum { START = 1, READING = 2, DONE = 4, ERROR = 8 } ReadStatus;
+typedef enum
+{
+  START = 1,
+  READING = 2,
+  DONE = 4,
+  ERROR = 8
+} ReadStatus;
 
-struct Sample {
+struct Sample
+{
   int16_t *buffer;
   std::size_t totalSize;
   EventGroupHandle_t flags;
   std::size_t cursor = 0;
 };
 
-static esp_err_t i2s_master_init() {
+static esp_err_t i2s_master_init()
+{
   i2s_chan_config_t chan_cfg =
       I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_AUTO, I2S_ROLE_MASTER);
   // chan_cfg.auto_clear = true; //todo
@@ -63,13 +71,15 @@ static esp_err_t i2s_master_init() {
 }
 
 IRAM_ATTR bool i2s_rx_recv(i2s_chan_handle_t rx_handle, i2s_event_data_t *event,
-                           void *arg) {
+                           void *arg)
+{
   // ESP_DRAM_LOGI("", "receive!");
   return false;
 }
 
 IRAM_ATTR bool i2s_rx_recv_ovf(i2s_chan_handle_t rx_handle,
-                               i2s_event_data_t *event, void *arg) {
+                               i2s_event_data_t *event, void *arg)
+{
   ESP_DRAM_LOGI("", "overflow!");
   return false;
 }
@@ -79,7 +89,8 @@ IRAM_ATTR bool i2s_rx_recv_ovf(i2s_chan_handle_t rx_handle,
  * then restarts the cycle.
  * @param arg: a pointer to Sample.
  */
-void acquisitionTask(void *arg) {
+void acquisitionTask(void *arg)
+{
   // START I2S
   i2s_event_callbacks_t cbs = {
       .on_recv = i2s_rx_recv,
@@ -88,12 +99,14 @@ void acquisitionTask(void *arg) {
       .on_send_q_ovf = nullptr,
   };
   esp_err_t ret = i2s_channel_register_event_callback(rx_handle, &cbs, arg);
-  if (ret != ESP_OK) {
+  if (ret != ESP_OK)
+  {
     ESP_LOGE(TAG, "Callbacks registration failed!");
   }
 
   ret = i2s_channel_enable(rx_handle);
-  if (ret != ESP_OK) {
+  if (ret != ESP_OK)
+  {
     ESP_LOGE(TAG, "I2S start failed!");
     vTaskDelay(portMAX_DELAY);
   }
@@ -101,7 +114,8 @@ void acquisitionTask(void *arg) {
   auto *sample = reinterpret_cast<Sample *>(arg);
   uint32_t timeoutMs = 100;
 
-  for (;;) {
+  for (;;)
+  {
     std::size_t bytesToRead =
         std::min(sample->totalSize, sample->totalSize - sample->cursor);
     std::size_t bytesRead = 0;
@@ -111,9 +125,11 @@ void acquisitionTask(void *arg) {
 
     sample->cursor = sample->cursor + bytesRead / 2;
 
-    if (sample->cursor >= sample->totalSize) {
+    if (sample->cursor >= sample->totalSize)
+    {
       ESP_LOGI(TAG, "Reading complete!");
-      for (std::size_t i = 0; i < 3; i++) {
+      for (std::size_t i = 0; i < 3; i++)
+      {
         std::size_t offset = i * 10;
         ESP_LOGI(TAG,
                  "Sample %3d to %3d: %4d %4d %4d %4d %4d %4d "
@@ -125,9 +141,17 @@ void acquisitionTask(void *arg) {
                  sample->buffer[offset + 7], sample->buffer[offset + 8],
                  sample->buffer[offset + 9]);
       }
+
+      // for (std::size_t i = 0; i < sample->totalSize; i = i + 10000)
+      // {
+      //   ESP_LOGI(TAG,
+      //            "Sample %3d: %4d",
+      //            i, sample->buffer[i] % 10);
+      // }
       ESP_LOGI(TAG, "...");
       for (std::size_t i = sample->totalSize / 10 - 3;
-           i < sample->totalSize / 10; i++) {
+           i < sample->totalSize / 10; i++)
+      {
         std::size_t offset = i * 10;
         ESP_LOGI(TAG,
                  "Sample %3d to %3d: %4d %4d %4d %4d %4d %4d "
@@ -144,13 +168,17 @@ void acquisitionTask(void *arg) {
   }
 }
 
-extern "C" void app_main(void) {
+extern "C" void app_main(void)
+{
   printf("i2s read start\n-----------------------------\n");
 
-  if (i2s_master_init() != ESP_OK) {
+  if (i2s_master_init() != ESP_OK)
+  {
     ESP_LOGE(TAG, "i2s driver init failed");
     abort();
-  } else {
+  }
+  else
+  {
     ESP_LOGI(TAG, "i2s driver init success");
   }
 
@@ -166,7 +194,8 @@ extern "C" void app_main(void) {
   xTaskCreate(acquisitionTask, "AcquisitionTask",
               configMINIMAL_STACK_SIZE * 100, &mySample, 5, nullptr);
 
-  for (;;) {
+  for (;;)
+  {
     vTaskDelay(portMAX_DELAY);
   }
 }
