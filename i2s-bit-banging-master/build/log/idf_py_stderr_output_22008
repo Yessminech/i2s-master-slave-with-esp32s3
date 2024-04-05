@@ -1,0 +1,1 @@
+C:\Users\YCHABC~1\AppData\Local\Temp\confgen_tmp2ccrp242:157: warning: '1' is not a valid value for the bool symbol SOC_PCNT_GROUPS (defined at C:/Espressif5.0/Espressif/frameworks/esp-idf-v5.0.4\./components/soc/esp32s3/include/soc/Kconfig.soc_caps.in:494). Assignment ignored.

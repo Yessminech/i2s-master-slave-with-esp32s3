@@ -159,9 +159,12 @@ void acquisitionTask(void *arg)
             }
             // RESET
             memset(mySample->buffer, 0, 3 * EXAMPLE_SAMPLE_RATE);
-            // EventBits_t uxBits;
-            xEventGroupClearBits(mySample->flags, DONE | READING); // todo: Why is this not working
-            // if( ( uxBits & ( DONE | READING ) ) == ( DONE | READING ) )  { }
+            EventBits_t uxBits;
+            xEventGroupClearBits(mySample->flags, DONE | READING); 
+            // if ((uxBits & (DONE | READING)) == (DONE | READING))// todo: Why is this not working 
+            // {
+            //     ESP_LOGI(TAG, "Task notified end of acquisition successfully %" PRId16 " samples collected. ", *mySample->cursor);
+            // }
             *mySample->cursor = 0;
             xEventGroupSetBits(mySample->flags, START);
         }
